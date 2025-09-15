@@ -871,6 +871,9 @@ header.main-header .header-sticky.active {
 	height: 100%;
 }
 
+.active-nav {
+	color: var(--accent-secondary-color) !important
+}
 .hero.hero-video .hero-bg-video video {
 	width: 100%;
 	height: 100%;
@@ -1430,6 +1433,25 @@ header.main-header .header-sticky.active {
 	color: var(--white-color);
 }
 
+.service-item.active .service-content p,
+.service-item:hover .service-content p {
+	color: var(--white-color);
+}
+
+.service-item .service-content ul li::marker,
+.service-item .service-content ul li::marker {
+	content: "✔ ";
+	/* color: var(--primary-color); */
+	color: var(--accent-secondary-color);
+	font-size: 18px;
+}
+
+.service-item.active .service-content ul li::marker,
+.service-item:hover .service-content ul li::marker {
+	content: "✔ ";
+	color: var(--white-color);
+	font-size: 18px;
+}
 /************************************/
 /*** 	  07. Our Feature css	  ***/
 /************************************/
