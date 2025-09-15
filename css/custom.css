@@ -5179,7 +5179,21 @@ header.main-header .header-sticky.active {
 	text-align: center;
 	z-index: 1;
 }
+.footer-contact-section {
+	display: inline-flex;
+	gap: 10px;
+	text-align: center;
+}
 
+.footer-contact-location-section {
+	display: inline-flex;
+	gap: 10px;
+	align-items: flex-start;
+}
+
+.footer-email-text {
+	text-transform: none;
+}
 .member-contact-form.contact-form .form-control {
 	background: var(--white-color);
 }
