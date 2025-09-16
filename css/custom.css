@@ -575,9 +575,12 @@ header.main-header {
 }
 
 header.main-header .header-sticky {
-	position: relative;
-	top: 0;
-	z-index: 100;
+	position: fixed;
+		top: 0;
+		z-index: 100;
+	background: white;
+		right: 0;
+		left: 0;
 }
 
 header.main-header .header-sticky.hide {
