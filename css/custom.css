@@ -1098,6 +1098,7 @@ header.main-header .header-sticky.active {
 
 .about-us {
 	padding: 100px 0;
+	background-color: var(--secondary-color);
 }
 
 
@@ -1300,7 +1301,7 @@ header.main-header .header-sticky.active {
 /************************************/
 
 .our-services {
-	background: var(--secondary-color);
+	/* background: var(--secondary-color); */
 	padding: 100px 0 70px;
 }
 
