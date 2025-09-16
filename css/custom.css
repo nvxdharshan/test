@@ -942,7 +942,7 @@ header.main-header .header-sticky.active {
 .hero-content {
 	position: relative;
 	width: 100%;
-	max-width: 635px;
+	max-width: 835px;
 	z-index: 2;
 }
 
@@ -2924,6 +2924,11 @@ header.main-header .header-sticky.active {
 	padding-bottom: 50px;
 }
 
+.footer-logo {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
 .footer-logo img {
 	width: 100%;
 	max-width: 223px;
@@ -5954,6 +5959,7 @@ header.main-header .header-sticky.active {
 		padding-bottom: 40px;
 	}
 
+
 	.footer-logo img {
 		max-width: 183px;
 	}
@@ -7141,6 +7147,9 @@ header.main-header .header-sticky.active {
 
 	.footer-logo {
 		margin-bottom: 20px;
+		flex-direction: row;
+			align-items: center;
+			border-bottom: 1px solid var(--divider-color);
 	}
 
 	.footer-social-links ul li {
