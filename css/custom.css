@@ -1098,7 +1098,6 @@ header.main-header .header-sticky.active {
 
 .about-us {
 	padding: 100px 0;
-	background-color: var(--secondary-color);
 }
 
 
@@ -1301,7 +1300,7 @@ header.main-header .header-sticky.active {
 /************************************/
 
 .our-services {
-	/* background: var(--secondary-color); */
+	background: var(--secondary-color);
 	padding: 100px 0 70px;
 }
 
@@ -2716,7 +2715,7 @@ header.main-header .header-sticky.active {
 }
 
 .our-faqs.home-our-faqs {
-	background: var(--secondary-color);
+	background: var(--white-color);
 }
 
 .faq-content {
@@ -2781,7 +2780,7 @@ header.main-header .header-sticky.active {
 }
 
 .faq-accordion .accordion-header .accordion-button.collapsed {
-	background: var(--white-color);
+	background: var(--secondary-color);
 	color: var(--primary-color);
 }
 
@@ -2822,6 +2821,7 @@ header.main-header .header-sticky.active {
 
 .our-blog {
 	padding: 100px 0;
+	background: var(--secondary-color);
 }
 
 .post-item {
