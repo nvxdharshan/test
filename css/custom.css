@@ -1300,7 +1300,7 @@ header.main-header .header-sticky.active {
 /************************************/
 
 .our-services {
-	background: var(--accent-color);
+	background: var(--secondary-color);
 	padding: 100px 0 70px;
 }
 
