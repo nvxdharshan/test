@@ -2928,6 +2928,7 @@ header.main-header .header-sticky.active {
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
+	align-items: center;
 }
 .footer-logo img {
 	width: 100%;
@@ -5088,7 +5089,7 @@ header.main-header .header-sticky.active {
 	flex-wrap: wrap;
 	gap: 30px 100px;
 	padding: 60px;
-	margin: -150px 0 80px 0;
+	margin: -60px 0 40px 0;
 	z-index: 1;
 	padding: 80px;
 }
@@ -5962,6 +5963,7 @@ header.main-header .header-sticky.active {
 
 	.footer-logo img {
 		max-width: 183px;
+		padding-bottom: 16px;
 	}
 
 	.footer-newsletter-form {
@@ -7149,7 +7151,7 @@ header.main-header .header-sticky.active {
 		margin-bottom: 20px;
 		flex-direction: row;
 			align-items: center;
-			border-bottom: 1px solid var(--divider-color);
+			border-bottom: 1px solid var(--dark-divider-color);
 	}
 
 	.footer-social-links ul li {
