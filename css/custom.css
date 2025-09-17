@@ -396,7 +396,7 @@ body {
 	top: 50%;
 	left: 0;
 	transform: translateY(-50%);
-	background: url('../images/icon-sub-heading.svg');
+	/* background: url('../images/icon-sub-heading.svg'); */
 	background-repeat: no-repeat;
 	background-position: left center;
 	background-size: cover;
@@ -419,6 +419,13 @@ body {
 	cursor: none;
 }
 
+.section-title h5 {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 0;
+	color: var(--white-color);
+	cursor: none;
+}
 .section-title h1 span,
 .section-title h2 span {
 	background: linear-gradient(90.15deg, var(--accent-color) 0%, var(--accent-secondary-color) 100%);
@@ -844,7 +851,8 @@ header.main-header .header-sticky.active {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	padding: 140px 0;
+	padding: 160px 0;
+		top: 80px
 }
 
 .hero::before {
@@ -2912,7 +2920,7 @@ header.main-header .header-sticky.active {
 /************************************/
 
 .main-footer {
-	background: url(../images/footer-bg.png), linear-gradient(90.15deg, var(--accent-color) 1.15%, var(--accent-secondary-color) 98.84%);
+	background: linear-gradient(90.15deg, var(--accent-color) 1.15%, var(--accent-secondary-color) 98.84%);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 100% auto;
