@@ -386,22 +386,7 @@ body {
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
 	color: var(--primary-color);
-	padding-left: 30px;
 	margin-bottom: 20px;
-}
-
-.section-title h3::before {
-	content: '';
-	position: absolute;
-	top: 50%;
-	left: 0;
-	transform: translateY(-50%);
-	/* background: url('../images/icon-sub-heading.svg'); */
-	background-repeat: no-repeat;
-	background-position: left center;
-	background-size: cover;
-	width: 20px;
-	height: 20px;
 }
 
 .section-title h1 {
@@ -1105,53 +1090,21 @@ header.main-header .header-sticky.active {
 /************************************/
 
 .about-us {
-	padding: 100px 0;
+	padding: 180px 0 100px;
 }
 
 
-.about-us-image {
-	position: relative;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: end;
-	gap: 30px;
-	margin-right: 20px;
-}
-
-.about-image-box {
-	width: 95%;
-	/*  calc(50% - 10px);*/
-}
-
-.about-img-2 {
-	margin-bottom: 30px;
-}
-
-.about-img-1 figure,
-.about-img-2 figure,
-.about-img-3 figure {
+.about-us-image figure {
 	display: block;
 	border-radius: 30px;
 }
-
-.about-img-1 img,
-.about-img-2 img,
-.about-img-3 img {
+.about-us-image img {
 	width: 100%;
+	max-width: 100%;
+		aspect-ratio: 1 / 0.608;
 	object-fit: cover;
 	border-radius: 30px;
 }
-
-.about-img-1 img {
-	aspect-ratio: 9 / 9;
-	max-width: 95%;
-}
-
-.about-img-2 img,
-.about-img-3 img {
-	aspect-ratio: 1 / 1.07;
-}
-
 .get-free-security-circle {
 	position: absolute;
 	left: 50%;
@@ -5343,14 +5296,8 @@ header.main-header .header-sticky.active {
 		margin-bottom: 30px;
 	}
 
-	.section-title h3 {
-		padding-left: 25px;
+		.section-title h3 {
 		margin-bottom: 10px;
-	}
-
-	.section-title h3::before {
-		width: 18px;
-		height: 18px;
 	}
 
 	.section-title h1 {
@@ -5426,12 +5373,12 @@ header.main-header .header-sticky.active {
 	}
 
 	.about-us {
-		padding: 50px 0;
+		padding: 100px 0;
 	}
 
-	.about-us-image {
-		margin-right: 0;
-		margin-bottom: 30px;
+																																																																																																																																.faq-image figure {
+																																																																																																																																	display: block;
+																																																																																																																																	border-radius: 30px;
 	}
 
 	.about-img-1 figure,
@@ -5458,6 +5405,7 @@ header.main-header .header-sticky.active {
 
 	.about-us-content {
 		margin-left: 0px;
+		padding-top: 40px;
 	}
 
 	.about-us-body {
@@ -6764,16 +6712,8 @@ header.main-header .header-sticky.active {
 		/*  calc(50% - 10px);*/
 	}
 
-	.about-img-1 {
-		margin-top: 50px;
-	}
-
-	.about-img-2 {
-		margin-bottom: 20px;
-	}
-
-	.get-free-security-circle img {
-		max-width: 100px;
+																.about-us-content {
+																	padding-top: 32px;
 	}
 
 	.about-us-body {
