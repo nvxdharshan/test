@@ -837,7 +837,8 @@ header.main-header .header-sticky.active {
 	background-position: center center;
 	background-size: cover;
 	padding: 160px 0;
-		top: 80px
+	top: 80px;
+		margin-bottom: 40px;
 }
 
 .hero::before {
@@ -1090,7 +1091,7 @@ header.main-header .header-sticky.active {
 /************************************/
 
 .about-us {
-	padding: 180px 0 100px;
+	padding: 100px 0;
 }
 
 
@@ -2877,7 +2878,10 @@ header.main-header .header-sticky.active {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 100% auto;
-	padding: 80px 0 0 0;
+	padding-top: 40px;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
 }
 
 .footer-header {
@@ -3037,8 +3041,8 @@ header.main-header .header-sticky.active {
 
 .footer-copyright {
 	border-top: 1px solid var(--dark-divider-color);
-	margin-top: 80px;
-	padding: 40px 0;
+	margin-top: 32px;
+		padding: 32px 0;
 }
 
 .footer-copyright-text {
@@ -5011,7 +5015,7 @@ header.main-header .header-sticky.active {
 /************************************/
 
 .page-contact-us {
-	padding: 100px 0;
+	padding: 100px 0 30px;
 }
 
 .page-contact-us .section-row .section-title {
@@ -5324,6 +5328,7 @@ header.main-header .header-sticky.active {
 
 	.hero {
 		padding: 100px 0;
+		margin-bottom: 60px;
 	}
 
 	.hero.hero-video {
@@ -5376,32 +5381,6 @@ header.main-header .header-sticky.active {
 		padding: 100px 0;
 	}
 
-																																																																																																																																.faq-image figure {
-																																																																																																																																	display: block;
-																																																																																																																																	border-radius: 30px;
-	}
-
-	.about-img-1 figure,
-	.about-img-2 figure,
-	.about-img-3 figure,
-	.about-img-1 img,
-	.about-img-2 img,
-	.about-img-3 img {
-		border-radius: 20px;
-	}
-
-	.about-img-1 img {
-		aspect-ratio: 1 / 1.58;
-	}
-
-	.about-img-2 img,
-	.about-img-3 img {
-		aspect-ratio: 1 / 0.92;
-	}
-
-	.get-free-security-circle img {
-		max-width: 140px;
-	}
 
 	.about-us-content {
 		margin-left: 0px;
@@ -5912,7 +5891,7 @@ header.main-header .header-sticky.active {
 	}
 
 	.main-footer {
-		padding: 40px 0 0 0;
+		padding: 24px 0;
 	}
 
 	.footer-header {
@@ -5932,7 +5911,7 @@ header.main-header .header-sticky.active {
 
 	.footer-quick-links,
 	.footer-links {
-		margin: 0 0 30px 0;
+		margin: 0;
 	}
 
 	.footer-links h3 {
@@ -6604,7 +6583,7 @@ header.main-header .header-sticky.active {
 	}
 
 	.page-contact-us {
-		padding: 50px 0;
+		padding: 120px 0 50px;
 	}
 
 	.page-contact-us .section-row .section-title {
@@ -6698,11 +6677,17 @@ header.main-header .header-sticky.active {
 		font-size: 26px;
 	}
 
+								.hero {
+									margin-bottom: 60px;
+								}
 	.hero-content-body {
 		gap: 20px;
 		justify-content: space-between;
 	}
 
+																																																																																																																																.about-us {
+																																																																																																																																	padding: 60px 0;
+																																																																																																																																}
 	.about-us-image {
 		gap: 20px;
 	}
@@ -7438,6 +7423,9 @@ header.main-header .header-sticky.active {
 		padding: 20px;
 	}
 
+	.page-contact-us {
+		padding: 60px 0;
+	}
 	.page-contact-box {
 		padding: 0 20px 30px 20px;
 		margin-top: 50px;
