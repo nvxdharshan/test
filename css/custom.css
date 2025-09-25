@@ -1581,6 +1581,50 @@ header.main-header {
 
 
 /************************************/
+/*** 	 Privacy Page css   	  ***/
+/************************************/
+.privacy-policy {
+	max-width: 800px;
+	margin: 60px auto;
+	padding: 20px;
+	background-color: #fff;
+	color: #333;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.6;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+	border-radius: 8px;
+}
+
+.privacy-policy h1 {
+	font-size: 2em;
+	margin-bottom: 20px;
+	color: #0056b3;
+}
+
+.privacy-policy h4 {
+	font-size: 1.5em;
+	margin: 16px 0;
+	color: #333;
+}
+
+.privacy-policy p {
+	margin-bottom: 0;
+	color: #333;
+}
+
+.privacy-policy ul {
+	padding-left: 20px;
+}
+
+.privacy-policy a {
+	color: #007bff;
+	text-decoration: none;
+}
+
+.privacy-policy a:hover {
+	text-decoration: underline;
+}
+/************************************/
 /*** 	     Blog Single css	  ***/
 /************************************/
 
