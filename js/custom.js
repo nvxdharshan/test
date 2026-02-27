@@ -2,9 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const el = document.querySelector(".page-single-slider .swiper");
 
-  if (el.swiper) {
-    el.swiper.destroy(true, true);
-  }
+  if (!el.swiper) return;
 
   const realSlides = el.querySelectorAll('.swiper-slide').length;
 
@@ -38,6 +36,18 @@ document.addEventListener("DOMContentLoaded", function () {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1200: {
+        slidesPerView: 3,        
+      }
     }
   });
 
