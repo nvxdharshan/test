@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="description" content="Security advisories published by Nexviax." />
+    <!-- Page Title -->
+    <title>Nexviax Technologies - Advisories</title>
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <!-- Google Fonts Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Bootstrap Css -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <!-- SlickNav Css -->
+    <link href="../css/slicknav.min.css" rel="stylesheet" />
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <!-- Font Awesome Icon Css-->
+    <link href="../css/all.min.css" rel="stylesheet" media="screen" />
+    <!-- Animated Css -->
+    <link href="../css/animate.css" rel="stylesheet" />
+    <!-- Magnific Popup Core Css File -->
+    <link rel="stylesheet" href="../css/magnific-popup.css" />
+    <!-- Mouse Cursor Css File -->
+    <link rel="stylesheet" href="../css/mousecursor.css" />
+    <!-- Main Custom Css -->
+    <link href="../css/custom.css" rel="stylesheet" media="screen" />
+    <!-- Advisory Index Css -->
+    <link href="advisory-index.css" rel="stylesheet" media="screen" />
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-sticky">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../images/logo.svg" alt="Logo" />
+                    </a>
+
+                    <div class="collapse navbar-collapse main-menu">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">
+                                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="../index.html#abouts-us">About Us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="../index.html#our-services">Services</a></li>
+                                <li class="nav-item"><a class="nav-link" href="../index.html#faq">FAQ</a></li>
+                                <li class="nav-item"><a class="nav-link" href="../index.html#blogs">Blogs</a></li>
+                                <li class="nav-item"><a class="nav-link" href="../contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="header-btn">
+                            <a href="../contact.html" class="btn-default">get started</a>
+                        </div>
+                    </div>
+
+                    <div class="navbar-toggle"></div>
+                </div>
+            </nav>
+            <div class="responsive-menu"></div>
+        </div>
+    </header>
+
+    <div class="advisory-hero">
+        <div class="container section-container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-header-box">
+                        <h1 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Threat Advisories</h1>
+                        <ol class="breadcrumb wow fadeInUp" data-wow-delay="0.4s">
+                            <li class="breadcrumb-item"><a href="../index.html">home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">threat advisories</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="advisory-hub our-services">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-lg-12">
+                    <div class="section-title" style="max-width: 100%;">
+                        <h2 class="wow fadeInUp">Threat Advisories</h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.4s">Search and filter advisories by severity, product,
+                            and tags.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row advisory-layout">
+                <!-- Filters (left) -->
+                <div class="col-lg-4 col-xl-3">
+                    <aside class="advisory-panel" aria-label="Filters">
+                        <div class="advisory-panel-title">
+                            <h3>Filter</h3>
+                            <button class="advisory-link-btn" id="resetFilters" type="button">Reset</button>
+                        </div>
+
+                        <div class="advisory-field">
+                            <label class="advisory-filter-label" for="filterQuery">Search</label>
+                            <input id="filterQuery" class="form-control advisory-filter" type="search"
+                                placeholder="ID, CVE, keyword…" />
+                        </div>
+
+                        <div class="advisory-field">
+                            <label class="advisory-filter-label" for="filterSeverity">Severity</label>
+                            <select id="filterSeverity" class="form-select advisory-filter">
+                                <option value="">All</option>
+                                <option value="Critical">Critical</option>
+                                <option value="High">High</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Low">Low</option>
+                            </select>
+                        </div>
+
+                        <div class="advisory-field">
+                            <label class="advisory-filter-label" for="filterProduct">Product</label>
+                            <select id="filterProduct" class="form-select advisory-filter">
+                                <option value="">All</option>
+                            </select>
+                        </div>
+
+                        <div class="advisory-field">
+                            <div class="advisory-filter-label">Tags</div>
+                            <div class="advisory-chip-row" id="tagChips" aria-label="Tag filter"></div>
+                        </div>
+                    </aside>
+                </div>
+
+                <!-- Results (right) -->
+                <div class="col-lg-8 col-xl-9">
+                    <div class="advisory-toolbar">
+                        <div id="resultCount" class="advisory-count"></div>
+                        <div class="advisory-toolbar-right">
+                            <label class="advisory-filter-label" for="sortBy">Sort</label>
+                            <select id="sortBy" class="form-select advisory-filter">
+                                <option value="date_desc" selected>Newest</option>
+                                <option value="date_asc">Oldest</option>
+                                <option value="severity_desc">Severity</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="advisory-list-head" role="row">
+                        <div class="advisory-col advisory-col-title" role="columnheader">Advisory</div>
+                        <div class="advisory-col advisory-col-sev" role="columnheader">Severity</div>
+                        <div class="advisory-col advisory-col-date" role="columnheader">Published</div>
+                    </div>
+
+                    <div id="advisoryList" class="advisory-list" aria-live="polite"></div>
+
+                    <div class="advisory-pagination" id="pagination" aria-label="Pagination">
+                        <button class="advisory-page-btn" id="prevPage" type="button" aria-label="Previous page">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <div id="pageMeta" class="advisory-page-meta"></div>
+                        <button class="advisory-page-btn" id="nextPage" type="button" aria-label="Next page">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <div id="emptyState" class="advisory-empty" hidden>
+                        <h3>No advisories match your filters.</h3>
+                        <p>Try clearing filters or broadening your search.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-12">
+                    <div class="footer-links">
+                        <div class="footer-logo">
+                            <img src="../images/logo-dark.svg" alt="" />
+                            <div class="footer-social-links">
+                                <ul>
+                                    <li><a href="https://www.linkedin.com/company/nexviax" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                                    <li><a href="https://www.x.com/nexviax" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    <li><a href="https://youtube.com/@nexviax" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="https://medium.com/@nexviax" target="_blank"><i class="fa-brands fa-medium-m"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-5">
+                    <div class="footer-links footer-quick-links">
+                        <h3>Quick links</h3>
+                        <ul>
+                            <li><a href="../index.html#index">home</a></li>
+                            <li><a href="../index.html#abouts-us">about us</a></li>
+                            <li><a href="../index.html#our-services">services</a></li>
+                            <li><a href="../index.html#faq">FAQ</a></li>
+                            <li><a href="../index.html#blogs">blogs</a></li>
+                            <li><a href="../privacy.html">Privacy policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-4 col-7">
+                    <div class="footer-links">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li>
+                                <span class="footer-contact-section">
+                                    <img src="../images/icon-phone-accent-white.svg" /><a href="tel:+918807959368">+91
+                                        88079 59368</a>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="footer-contact-section">
+                                    <img src="../images/icon-mail-accent-white.svg" /><a href="mailto:info@nexviax.com"
+                                        class="footer-email-text">info@nexviax.com</a>
+                                </span>
+                            </li>
+                            <li class="footer-email-text">
+                                <span class="footer-contact-location-section">
+                                    <img src="../images/icon-location-white.svg" />
+                                    <p>
+                                        3rd Floor, Maestro Building, S.P. Garden, Kappi Kadai,
+                                        Vilankurichi, Coimbatore 641035, Tamil Nadu, India
+                                    </p>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="footer-copyright-text">
+                            <p>Copyright © 2026 All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.slicknav.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="advisory-init.js"></script>
+    <script src="advisory-index.js"></script>
+</body>
+
+</html>

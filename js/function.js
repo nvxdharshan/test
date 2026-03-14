@@ -42,22 +42,24 @@
 	}
 
 	/* Hero Slider Layout JS */
-	const hero_slider_layout = new Swiper('.hero-slider-layout .swiper', {
-		slidesPerView : 1,
-		speed: 1000,
-		spaceBetween: 0,
-		loop: true,
-		autoplay: {
-			delay: 4000,
-		},
-		pagination: {
-			el: '.hero-pagination',
-			clickable: true,
-		},
-	});
+	if (typeof Swiper !== 'undefined' && $('.hero-slider-layout .swiper').length) {
+		const hero_slider_layout = new Swiper('.hero-slider-layout .swiper', {
+			slidesPerView : 1,
+			speed: 1000,
+			spaceBetween: 0,
+			loop: true,
+			autoplay: {
+				delay: 4000,
+			},
+			pagination: {
+				el: '.hero-pagination',
+				clickable: true,
+			},
+		});
+	}
 
 	/* testimonial Slider JS */
-	if ($('.testimonial-slider').length) {
+	if (typeof Swiper !== 'undefined' && $('.testimonial-slider').length) {
 		const testimonial_slider = new Swiper('.testimonial-slider .swiper', {
 			slidesPerView : 1,
 			speed: 1000,
@@ -82,7 +84,7 @@
 	}
 
 	/* Page Single Slider Start */
-	if ($('.page-single-slider').length) {
+	if (typeof Swiper !== 'undefined' && $('.page-single-slider').length) {
 		const testimonial_slider = new Swiper('.page-single-slider .swiper', {
 			slidesPerView : 1,
 			speed: 1000,
@@ -191,45 +193,6 @@
 		}
 	});
 
-	/* Contact form validation */
-	var $contactform = $("#contactForm");
-	$contactform.validator({focus: false}).on("submit", function (event) {
-		if (!event.isDefaultPrevented()) {
-			event.preventDefault();
-			submitForm();
-		}
-	});
-
-	function submitForm(){
-		/* Ajax call to submit form */
-		$.ajax({
-			type: "POST",
-			url: "form-process.php",
-			data: $contactform.serialize(),
-			success : function(text){
-				if (text === "success"){
-					formSuccess();
-				} else {
-					submitMSG(false,text);
-				}
-			}
-		});
-	}
-
-	function formSuccess(){
-		$contactform[0].reset();
-		submitMSG(true, "Message Sent Successfully!")
-	}
-
-	function submitMSG(valid, msg){
-		if(valid){
-			var msgClasses = "h4 text-success";
-		} else {
-			var msgClasses = "h4 text-danger";
-		}
-		$("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
-	}
-	/* Contact form validation end */
 
 	/* Animated Wow Js */	
 	new WOW().init();

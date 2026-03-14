@@ -1,0 +1,15 @@
+[
+  {
+    "id": "NVX-2026-006",
+    "cve": "CVE-2026-26123",
+    "title": "MFA Bypass via Microsoft Authenticator Deep Link Hijacking",
+    "date": "2026-03-13",
+    "severity": "High",
+    "cvss": 7.5,
+    "product": "Microsoft Authenticator",
+    "tags": ["MFA", "Deep Link", "Mobile", "Microsoft"],
+    "excerpt": "A malicious app on the same device can intercept one-time codes or deep links, enabling MFA bypass without password theft.",
+    "href": "NVX-2026-006.html"
+  }
+]
+

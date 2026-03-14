@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexviax Technologies</title>
+<!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <!-- Google Fonts Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet" />
+    <!-- Bootstrap Css -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <!-- SlickNav Css -->
+    <link href="../css/slicknav.min.css" rel="stylesheet" />
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <!-- Font Awesome Icon Css-->
+    <link href="../css/all.min.css" rel="stylesheet" media="screen" />
+    <!-- Animated Css -->
+    <link href="../css/animate.css" rel="stylesheet" />
+    <!-- Magnific Popup Core Css File -->
+    <link rel="stylesheet" href="../css/magnific-popup.css" />
+    <!-- Mouse Cursor Css File -->
+    <link rel="stylesheet" href="../css/mousecursor.css" />
+    <!-- Main Custom Css -->
+    <link href="../css/custom.css" rel="stylesheet" media="screen" />
+    <link href="advisory.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-sticky">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <!-- Logo Start -->
+                    <a class="navbar-brand" href="../index.html ">
+                        <img src="../images/logo.svg" alt="Logo" />
+                    </a>
+                    <!-- Logo End -->
+
+                    <!-- Main Menu Start -->
+                    <div class="collapse navbar-collapse main-menu">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../index.html#abouts-us">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../index.html#our-services">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../index.html#faq">FAQ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../index.html#blogs">Blogs</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../contact.html">Contact Us</a>
+                                </li>
+                            </ul>
+                            </div>
+
+                        <!-- Header Btn Start -->
+                        <div class="header-btn">
+                            <a href="../contact.html" class="btn-default">get started</a>
+                        </div>
+                        <!-- Header Btn End -->
+                    </div>
+                    <!-- Main Menu End -->
+                    <div class="navbar-toggle"></div>
+                    </div>
+            </nav>
+            <div class="responsive-menu"></div>
+        </div>
+    </header>
+<div class="page-wrap">
+  <nav class="advisory-breadcrumb" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Advisories</a></li>
+      <li class="breadcrumb-item active" aria-current="page">NVX-2026-006</li>
+    </ol>
+  </nav>
+<div class="advisory-shell">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-logo">
+          <span><img src="../images/favicon.png" alt="Logo" /></span>
+        </div>
+        <div class="brand-text">
+          <h1>NEXVIAX</h1>
+          <p>Ensuring Security, Powering Growth</p>
+        </div>
+      </div>
+      <div class="header-meta">
+        <div class="label">Full Threat Advisory</div>
+        <div class="value">NVX-2026-006 &nbsp;|&nbsp; 13 March 2026</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEVERITY BAR -->
+  <div class="severity-bar">
+    <div class="label">HIGH SEVERITY &nbsp;&rsaquo;&nbsp; MFA Bypass via Microsoft Authenticator Deep Link Hijacking</div>
+    <div class="cvss">CVSS &nbsp;<strong>7.5</strong>&nbsp;/ 10</div>
+  </div>
+
+  <!-- TITLE CARD -->
+  <div class="title-card">
+    <div class="advisory-id-badge">NVX-2026-006 &nbsp;|&nbsp; CVE-2026-26123</div>
+    <h2>Microsoft Authenticator Vulnerability Exposes<br>One-Time Login Codes to Malicious Apps</h2>
+    <div class="meta-row">
+      <span><strong>Published:</strong> 13 March 2026</span>
+      <span><strong>CVE:</strong> CVE-2026-26123</span>
+      <span><strong>Severity:</strong> High (CVSS 7.5)</span>
+      <span><strong>Patch Available:</strong> Yes</span>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- 1. THREAT OVERVIEW -->
+    <div class="section">
+      <div class="section-label">1. Threat Overview</div>
+      <p>A vulnerability in Microsoft Authenticator for iOS and Android (CVE-2026-26123) allows a malicious application installed on the same mobile device to intercept one-time login codes (TOTP) and authentication deep links before they are processed by the Authenticator app. If exploited, an attacker gains the ability to complete multi-factor authentication flows as the victim, bypassing MFA protection on any account secured by Microsoft Authenticator without any credential theft, phishing, or network interception.</p>
+      <p>The vulnerability was disclosed on 12 March 2026. Microsoft has released a patch in the current version of Microsoft Authenticator for both platforms. Organizations must treat this as an urgent update deployment task given the widespread reliance on Authenticator for MFA across Microsoft 365, Azure, and third-party services.</p>
+    </div>
+
+    <!-- 2. BACKGROUND -->
+    <div class="section">
+      <div class="section-label">2. Background</div>
+      <p>Microsoft Authenticator is one of the most widely deployed MFA applications globally, used to generate time-based one-time passwords (TOTP), approve push-based sign-in requests, and handle authentication deep links and QR-based logins for Microsoft and third-party accounts.</p>
+      <p>A deep link is a specially constructed URI that opens a mobile app and triggers a specific action, such as completing a sign-in flow or approving an authentication request. The vulnerability affects how the Authenticator app registers and exclusively handles these authentication URIs, creating an opportunity for other apps to intercept the link before the Authenticator receives it.</p>
+      <p>BYOD environments are the highest-risk deployment context for this vulnerability. On BYOD devices, the organization has no direct control over which other apps are installed alongside Authenticator, and employees often grant broad permissions to third-party apps without awareness of the associated risk.</p>
+    </div>
+
+    <!-- 3. TECHNICAL DETAILS -->
+    <div class="section">
+      <div class="section-label">3. Technical Vulnerability Details</div>
+      <p>The flaw originates in the way Microsoft Authenticator registers URI scheme handlers on iOS and Android. On both platforms, it is possible for a separately installed application to declare itself as a handler for the same authentication URI schemes used by Microsoft Authenticator. When the operating system presents a disambiguation prompt (or silently routes the link based on install order or app permissions), the malicious app can receive the deep link instead of Authenticator.</p>
+
+      <div class="surfaces">
+        <div class="surface-card">
+          <h4>TOTP Code Interception</h4>
+          <p>Where authentication flows deliver a one-time code via URI, the malicious app receives the code and can use it to complete a sign-in within the TOTP validity window (typically 30 seconds).</p>
+        </div>
+        <div class="surface-card">
+          <h4>Deep Link Hijacking</h4>
+          <p>Sign-in deep links that carry authentication tokens or session parameters are rerouted to the malicious app, which can extract embedded credentials and replay them against the target service.</p>
+        </div>
+        <div class="surface-card">
+          <h4>QR-Based Login Abuse</h4>
+          <p>QR code scanning flows that invoke an authentication URI are similarly vulnerable, allowing the malicious app to intercept the scan result before Microsoft Authenticator processes it.</p>
+        </div>
+      </div>
+
+      <div class="impact-box">
+        <div class="impact-label">Exploitation Preconditions</div>
+        <p>For the attack to succeed, a malicious app must already be installed on the victim&rsquo;s device, and the user must either trigger an authentication deep link while the malicious app is configured as a handler, or scan a QR code that invokes the vulnerable URI scheme. The attack does not require root access, network positioning, or any interaction beyond the victim performing a routine sign-in.</p>
+      </div>
+    </div>
+
+    <!-- 4. HOW THE ATTACK WORKS -->
+    <div class="section">
+      <div class="section-label">4. How the Attack Works</div>
+      <p>An attacker first establishes a presence on the victim&rsquo;s device via a malicious app, which may be disguised as a productivity tool, utility, or even a legitimate-looking clone of a known app distributed outside official app stores. The malicious app registers itself as a handler for authentication URI schemes used by Microsoft Authenticator.</p>
+      <p>When the victim initiates a sign-in to a Microsoft or third-party account protected by Authenticator, the OS generates or receives an authentication deep link. If the malicious app has registered for the same scheme, the OS may present a disambiguation dialog or, on some configurations, silently route the link to the most recently installed handler. The user, not expecting a different app to handle an authentication link, may unknowingly select the malicious app or the OS may route it automatically.</p>
+      <p>The malicious app then receives the one-time code or signed authentication token embedded in the deep link. Using this credential, the attacker completes the MFA challenge from their own device or infrastructure, gaining authenticated access to the victim&rsquo;s account. The victim receives no warning and the sign-in appears to originate from a known authentication flow.</p>
+    </div>
+
+    <!-- 5. AFFECTED SYSTEMS -->
+    <div class="section">
+      <div class="section-label">5. Affected Systems</div>
+      <table class="details-table">
+        <thead><tr><td colspan="2">Affected Configurations</td></tr></thead>
+        <tbody>
+          <tr><td class="key">Platform</td><td class="val">iOS and Android</td></tr>
+          <tr><td class="key">Affected App</td><td class="val">Microsoft Authenticator (all versions prior to the March 2026 patch release)</td></tr>
+          <tr><td class="key">Account Types</td><td class="val">Microsoft personal, Microsoft 365 work/school, and any third-party account enrolled in Authenticator</td></tr>
+          <tr><td class="key">Deployment Risk</td><td class="val amber">BYOD devices (highest), managed devices with sideloaded apps (medium)</td></tr>
+          <tr><td class="key">Unaffected</td><td class="val">Microsoft Authenticator on Windows (desktop); hardware security keys (FIDO2); push notification-only flows with no deep link component</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 6. RISK AND IMPACT -->
+    <div class="section">
+      <div class="section-label">6. Risk and Impact</div>
+      <div class="impact-box">
+        <div class="impact-label">Organizational Risk Summary</div>
+        <p>A successful exploit delivers authenticated account access to an attacker without requiring a password. From the target service perspective, the login is indistinguishable from a legitimate MFA-protected sign-in. The attacker can access email, files, cloud applications, administrative portals, and any other resource the victim account has permissions to reach. In BYOD environments used by staff with elevated M365 or Azure privileges, the potential impact is severe.</p>
+      </div>
+      <p>Secondary risks include lateral movement via accounts that share the same Authenticator-protected credentials, persistence established through app registrations or OAuth grants made during the attacker&rsquo;s session, and exfiltration of sensitive data from SharePoint, OneDrive, or Teams before the session is revoked.</p>
+    </div>
+
+    <!-- 7. INDICATORS OF COMPROMISE -->
+    <div class="section">
+      <div class="section-label">7. Indicators of Compromise</div>
+      <p>The following observable patterns may indicate exploitation of CVE-2026-26123 in your environment. None are individually conclusive but should trigger further investigation when observed together.</p>
+      <table class="ioc-table">
+        <thead>
+          <tr>
+            <td class="ioc-col-type">Type</td>
+            <td>Indicator</td>
+            <td class="ioc-col-action">Recommended Action</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="type">Anomalous Sign-In</td>
+            <td>Successful MFA-protected sign-in from a device or location not associated with the user, with no prior failed attempts</td>
+            <td>Investigate via Azure AD Sign-In Logs; revoke session</td>
+          </tr>
+          <tr>
+            <td class="type">URI Handler Conflict</td>
+            <td>User reports an unexpected app appearing as a handler when tapping a sign-in link or scanning a QR code</td>
+            <td>Quarantine device; remove unknown app; audit installed apps</td>
+          </tr>
+          <tr>
+            <td class="type">Unusual OAuth Grant</td>
+            <td>New third-party app OAuth consent recorded in Azure AD during or shortly after a sign-in event</td>
+            <td>Revoke consent; review app permissions in Azure AD portal</td>
+          </tr>
+          <tr>
+            <td class="type">Unexpected Data Access</td>
+            <td>SharePoint, OneDrive, or Exchange access from a user account at an unusual time or with atypical file patterns</td>
+            <td>Alert SOC; initiate account compromise response playbook</td>
+          </tr>
+          <tr>
+            <td class="type">Sideloaded App</td>
+            <td>Mobile device management (MDM) telemetry showing a non-store app installed that requests URI scheme handler permissions</td>
+            <td>Flag device as non-compliant; block corporate access until remediated</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 8. DETECTION GUIDANCE -->
+    <div class="section">
+      <div class="section-label">8. Detection Guidance</div>
+      <p><strong>Azure AD / Entra ID Sign-In Logs:</strong> Filter for MFA-satisfied sign-in events from devices not registered in your Intune or MDM inventory. Cross-reference against user travel patterns and known working hours. Alert on any sign-in where MFA method is Authenticator but the device ID is absent or unrecognized.</p>
+      <p><strong>Conditional Access Compliance Signals:</strong> Enable device compliance requirements in Conditional Access policies. A device running an unpatched Authenticator version should fail compliance checks once minimum version policies are enforced, blocking access before a successful exploit can translate into an authorized session.</p>
+      <p><strong>MDM App Inventory:</strong> Use Intune or your MDM platform to audit installed apps on managed devices. Flag any app that has registered URI scheme handlers matching Microsoft authentication patterns without being Microsoft Authenticator itself.</p>
+      <p><strong>Microsoft Sentinel:</strong> Deploy the Microsoft 365 Defender connector and create analytics rules for the sign-in anomaly patterns listed in the IOC table above. The &ldquo;Suspicious MFA success from previously unseen device&rdquo; rule template covers the primary exploitation scenario.</p>
+    </div>
+
+    <!-- 9. MITIGATION STEPS -->
+    <div class="section">
+      <div class="section-label">9. Mitigation Steps</div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <p><strong>Update Microsoft Authenticator immediately</strong> on all managed devices via Intune. Issue a self-service update notice to all BYOD users with a deadline and confirmation requirement. The current release contains the patch for CVE-2026-26123.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <p><strong>Enforce a minimum app version policy via Conditional Access</strong> so any device running a version of Authenticator below the patched release is blocked from accessing corporate resources until updated.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <p><strong>Instruct all staff</strong> to verify that sign-in deep links and QR code scans are handled exclusively by Microsoft Authenticator, and to immediately report any other app appearing as a handler for authentication links.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <p><strong>Review Azure AD sign-in logs</strong> for MFA-satisfied logins from unrecognized devices over the past 30 days. Revoke active sessions for any accounts showing anomalous patterns and force re-authentication on patched devices.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <p>If BYOD devices cannot be updated immediately, <strong>instruct affected users to use alternative MFA methods</strong> (push notification only, without deep link flows) until the update is confirmed, and avoid scanning QR codes for sign-in purposes.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">6</div>
+          <p><strong>Deploy or confirm mobile threat defence (MTD)</strong> solutions on BYOD devices enrolled for corporate access. MTD tools can detect malicious or anomalous apps that register unauthorized URI scheme handlers before they have the opportunity to intercept authentication flows.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. BEST PRACTICES -->
+    <div class="section">
+      <div class="section-label">10. Security Best Practices</div>
+      <div class="practices">
+        <div class="practice-item"><span class="practice-star">&#9733;</span><div>Enforce minimum app version policies in Conditional Access for all authentication apps, not just Microsoft Authenticator. Unpatched MFA clients represent a recurring attack surface as authentication app vulnerabilities become more common targets.</div></div>
+        <div class="practice-item"><span class="practice-star">&#9733;</span><div>Restrict BYOD device access using Intune App Protection Policies that do not require full device enrolment, allowing you to enforce app-level controls (including version requirements) on personal devices without full MDM management.</div></div>
+        <div class="practice-item"><span class="practice-star">&#9733;</span><div>Require managed devices for users with privileged access to M365 Admin Center, Azure portal, and production infrastructure. BYOD devices should not hold privileged account sessions regardless of MFA method.</div></div>
+        <div class="practice-item"><span class="practice-star">&#9733;</span><div>Migrate high-value accounts to phishing-resistant MFA methods (FIDO2 hardware keys or Windows Hello for Business) that are immune to deep link interception and push notification fatigue attacks.</div></div>
+        <div class="practice-item"><span class="practice-star">&#9733;</span><div>Implement a formal mobile device security policy for BYOD that prohibits sideloading of apps from outside official stores, and include mobile device security awareness in annual security training.</div></div>
+        <div class="practice-item"><span class="practice-star">&#9733;</span><div>Enable Microsoft Entra ID Protection risk-based Conditional Access policies that automatically block or challenge sign-ins flagged as high-risk, providing a compensating control when individual vulnerabilities exist in the MFA stack.</div></div>
+        <div class="practice-item"><span class="practice-star">&#9733;</span><div>Subscribe to Microsoft Security Response Center (MSRC) update notifications for Microsoft Authenticator and all other identity-critical apps. Authentication app patches should be treated with the same urgency as OS-level security updates.</div></div>
+      </div>
+    </div>
+
+    <!-- 11. REFERENCES -->
+    <div class="section">
+      <div class="section-label">11. References</div>
+      <div class="ref-list">
+        <div class="ref-item"><strong>CVE Record:</strong> CVE-2026-26123 &mdash; <a href="https://www.cve.org/CVERecord?id=CVE-2026-26123" target="_blank">cve.org/CVERecord?id=CVE-2026-26123</a></div>
+        <div class="ref-item"><strong>Malwarebytes Advisory:</strong> Microsoft Authenticator could leak login codes &mdash; <a href="https://www.malwarebytes.com/blog/news/2026/03/microsoft-authenticator-could-leak-login-codes-update-your-app-now" target="_blank">malwarebytes.com</a></div>
+        <div class="ref-item"><strong>Microsoft Security Response Center:</strong> MSRC &mdash; <a href="https://msrc.microsoft.com" target="_blank">msrc.microsoft.com</a></div>
+        <div class="ref-item"><strong>MITRE ATT&amp;CK:</strong> T1417 &mdash; Input Capture: Input Capture on Mobile &mdash; <a href="https://attack.mitre.org/techniques/T1417/" target="_blank">attack.mitre.org</a></div>
+        <div class="ref-item"><strong>MITRE ATT&amp;CK:</strong> T1635 &mdash; Steal Application Access Token &mdash; <a href="https://attack.mitre.org/techniques/T1635/" target="_blank">attack.mitre.org</a></div>
+        <div class="ref-item"><strong>Microsoft Intune:</strong> Minimum version app protection policy guidance &mdash; <a href="https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policies" target="_blank">learn.microsoft.com</a></div>
+        <div class="ref-item"><strong>Microsoft Entra:</strong> Conditional Access: Require compliant device &mdash; <a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/howto-conditional-access-policy-compliant-device" target="_blank">learn.microsoft.com</a></div>
+      </div>
+    </div>
+
+  </div><!-- /content -->
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-left">
+      <p>Need help? Contact our SOC at <a href="mailto:soc@nexviax.com">soc@nexviax.com</a></p>
+      <p class="sub">Nexviax &nbsp;&#183;&nbsp; Confidential &amp; For Authorized Recipients Only</p>
+    </div>
+  </div>
+
+</div>
+</div>
+<!-- Main Footer Section Start -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Header Start -->
+                <div class="col-lg-3 col-md-4 col-12">
+                    <div class="footer-links">
+                        <!-- Footer Logo Start -->
+                        <div class="footer-logo">
+                            <img src="../images/logo-dark.svg" alt="" />
+                            <div class="footer-social-links">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.linkedin.com/company/nexviax" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                        </li>
+                                        <li>
+                                        <a href="https://www.x.com/nexviax" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                        <a href="https://youtube.com/@nexviax" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                        </li>
+                                        <li>
+                                        <a href="https://medium.com/@nexviax" target="_blank"><i class="fa-brands fa-medium-m"></i></a>
+                                        </li>
+                                        </ul>
+                                        </div>
+                                        </div>
+                                        <!-- Footer Logo End -->
+                                        <!-- Footer Social Links End -->
+                                        </div>
+                                        </div>
+                                        
+                                        <div class="col-lg-4 col-md-4 col-5">
+                                            <!-- Footer Links Start -->
+                                            <div class="footer-links footer-quick-links">
+                                                <h3>Quick links</h3>
+                                                <ul>
+                                                    <li><a href="../index.html#index">home</a></li>
+                                                    <li><a href="../index.html#abouts-us">about us</a></li>
+                                                    <li><a href="../index.html#our-services">services</a></li>
+                                                    <li><a href="../index.html#faq">FAQ</a></li>
+                                                    <li><a href="../index.html#blogs">blogs</a></li>
+                                                    <li><a href="../privacy.html">Privacy policy</a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- Footer Links End -->
+                                        </div>
+                                        
+                                        <div class="col-lg-5 col-md-4 col-7">
+                                            <!-- Footer Links Start -->
+                                            <div class="footer-links">
+                                                <h3>Contact</h3>
+                                                <ul>
+                                                    <li>
+                                                        <span class="footer-contact-section">
+                                    <img src="../images/icon-phone-accent-white.svg" /><a href="tel:+918807959368">+91
+                                        88079 59368</a>
+                                </span>
+                                </li>
+                                <li>
+                                    <span class="footer-contact-section">
+                                    <img src="../images/icon-mail-accent-white.svg" /><a href="mailto:info@nexviax.com"
+                                        class="footer-email-text">info@nexviax.com</a>
+                                    </span>
+                                    </li>
+                                    <li class="footer-email-text">
+                                        <span class="footer-contact-location-section">
+                                            <img src="../images/icon-location-white.svg" />
+                                            <p>
+                                                3rd Floor, Maestro Building, S.P. Garden, Kappi Kadai,
+                                                Vilankurichi, Coimbatore 641035, Tamil Nadu, India
+                                            </p>
+                                        </span>
+                                    </li>
+                                    </ul>
+                    </div>
+                    <!-- Footer Links End -->
+                </div>
+            </div>
+            </div>
+            
+            <!-- Footer Copyright Start -->
+            <div class="footer-copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- Footer Copyright Text Start -->
+                            <div class="footer-copyright-text">
+                                <p>Copyright © 2026 All Rights Reserved.</p>
+                            </div>
+                            <!-- Footer Copyright Text End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Copyright End -->
+    </footer>
+    <!-- Jquery Library File -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="../js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="../js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/jquery.counterup.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="../js/SmoothScroll.js"></script>
+    <!-- Parallax js -->
+    <script src="../js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="../js/gsap.min.js"></script>
+
+    <!-- Text Effect js file -->
+    <script src="../js/SplitText.js"></script>
+    <script src="../js/ScrollTrigger.min.js"></script>
+    <!-- YTPlayer js File -->
+    <script src="../js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Wow js file -->
+    <script src="../js/wow.min.js"></script>
+    <script src="advisory-init.js"></script>
+    <!-- Main Footer Section End -->
+</body>
+</html>
