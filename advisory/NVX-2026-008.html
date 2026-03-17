@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexviax Technologies - NVX-2026-008</title>
+
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+
+  <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen" />
+  <link href="../css/slicknav.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+  <link href="../css/all.min.css" rel="stylesheet" media="screen" />
+  <link href="../css/animate.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/magnific-popup.css" />
+  <link rel="stylesheet" href="../css/mousecursor.css" />
+  <link href="../css/custom.css" rel="stylesheet" media="screen" />
+
+  <link href="advisory.css" rel="stylesheet" media="screen" />
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="header-sticky">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../images/logo.svg" alt="Logo" />
+          </a>
+
+          <div class="collapse navbar-collapse main-menu">
+            <div class="nav-menu-wrapper">
+              <ul class="navbar-nav mr-auto" id="menu">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#abouts-us">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#our-services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#faq">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#blogs">Blogs</a></li>
+                <li class="nav-item"><a class="nav-link" href="../contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div class="header-btn">
+              <a href="../contact.html" class="btn-default">get started</a>
+            </div>
+          </div>
+
+          <div class="navbar-toggle"></div>
+        </div>
+      </nav>
+      <div class="responsive-menu"></div>
+    </div>
+  </header>
+
+  <div class="page-wrap">
+    <nav class="advisory-breadcrumb" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html">Advisories</a></li>
+        <li class="breadcrumb-item active" aria-current="page">NVX-2026-008</li>
+      </ol>
+    </nav>
+
+    <div class="advisory-shell">
+      <!-- HEADER -->
+      <div class="header">
+        <div class="header-inner">
+          <div class="brand">
+            <div class="brand-logo">
+              <img src="../images/favicon.png" alt="Logo" />
+            </div>
+            <div class="brand-text">
+              <h1>NEXVIAX</h1>
+              <p>Ensuring Security, Powering Growth</p>
+            </div>
+          </div>
+
+          <div class="header-meta">
+            <div class="label">Full Threat Advisory</div>
+            <div class="value">NVX-2026-008 &nbsp;|&nbsp; 16 March 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEVERITY BAR -->
+      <!-- Change the background color inline if you want different severity colors per advisory -->
+      <div class="severity-bar">
+        <div class="label">HIGH SEVERITY &nbsp;&rsaquo;&nbsp; Social Engineering + Remote Access Abuse Deploying Memory-Resident Backdoor</div>
+        <div class="cvss">CVSS &nbsp;<strong>8.8</strong>&nbsp;/ 10</div>
+      </div>
+
+      <!-- TITLE CARD -->
+      <div class="title-card">
+        <div class="advisory-id-badge">NVX-2026-008 &nbsp;|&nbsp; Active Campaign</div>
+        <h2>Attackers Abuse Microsoft Teams and Quick Assist to Deploy Stealthy A0Backdoor Malware</h2>
+        <div class="meta-row">
+          <span><strong>Published:</strong> 16 March 2026</span>
+          <span><strong>Threat Actor:</strong> Blitz Brigantine (Storm-1811)</span>
+          <span><strong>Severity:</strong> High (CVSS 8.8)</span>
+          <span><strong>Campaign Status:</strong> Active</span>
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="content">
+
+        <!-- 1. THREAT OVERVIEW -->
+        <div class="section">
+          <div class="section-label">1. Threat Overview</div>
+          <p>A financially motivated threat group tracked as Blitz Brigantine (also known as Storm-1811 and STAC5777), with links to Black Basta ransomware operations, is actively running a social engineering campaign that combines email bombing, Microsoft Teams IT support impersonation, and Windows Quick Assist abuse to gain remote access to corporate machines. Once inside, the attackers deploy A0Backdoor, a newly identified memory-resident backdoor that communicates covertly through DNS tunneling and leaves no traditional file traces on disk.</p>
+          <p>The campaign was first documented by BlueVoyant researchers and has been active since at least August 2025. In early March 2026, the attackers refreshed their tooling with new code-signing certificates, new DLL sideloading chains, and an updated C2 mechanism, indicating active development and sustained operational intent. The campaign has confirmed victims in the finance and healthcare sectors, with cybersecurity-adjacent organizations identified as high-value secondary targets.</p>
+
+          <div class="critical-box">
+            <div class="critical-label">No Exploit Required</div>
+            <p>This attack requires no software vulnerability. The entire attack chain depends on a staff member trusting an unsolicited Teams message during a manufactured inbox crisis, then granting remote access through a built-in Windows tool. Technical controls alone cannot stop it without staff awareness and Teams access policy changes.</p>
+          </div>
+        </div>
+
+        <!-- 2. THREAT ACTOR -->
+        <div class="section">
+          <div class="section-label">2. Threat Actor Profile</div>
+          <table class="details-table">
+            <thead><tr><td colspan="2">Blitz Brigantine / Storm-1811 / STAC5777</td></tr></thead>
+            <tbody>
+              <tr><td class="key">Also Tracked As</td><td class="val">Storm-1811 (Microsoft), STAC5777 (Sophos), Blitz Brigantine (BlueVoyant)</td></tr>
+              <tr><td class="key">Affiliation</td><td class="val">Black Basta ransomware affiliate; overlaps with Cactus ransomware operations</td></tr>
+              <tr><td class="key">Motivation</td><td class="val">Financial: initial access brokerage and/or ransomware deployment</td></tr>
+              <tr><td class="key">Primary Targets</td><td class="val">Finance, healthcare, and cybersecurity organizations globally</td></tr>
+              <tr><td class="key">Campaign Active</td><td class="val">August 2025 to present; tooling refreshed March 2026</td></tr>
+              <tr><td class="key">Prior Tooling</td><td class="val">QakBot, Cobalt Strike, SystemBC, TitanPlus; now pivoted to A0Backdoor with DNS-based C2</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 3. ATTACK CHAIN -->
+        <div class="section">
+          <div class="section-label">3. Attack Chain</div>
+          <p>The attack follows a repeatable multi-stage social engineering playbook. Each stage is designed to build trust, create urgency, and exploit the victim&rsquo;s instinct to seek help from someone who appears to be a colleague.</p>
+          <div class="attack-chain">
+        <div class="chain-step">
+          <div class="chain-num">1</div>
+          <p><strong>Email bombing:</strong> The attacker floods the target&rsquo;s inbox with thousands of spam messages, creating immediate confusion and urgency. This disruption serves as the pretext for the next step.</p>
+        </div>
+        <div class="chain-step">
+          <div class="chain-num">2</div>
+          <p><strong>Teams impersonation:</strong> Shortly after the spam wave, the attacker contacts the same victim via Microsoft Teams, impersonating internal IT support staff and offering to resolve the inbox problem. The attacker may spoof a display name matching internal IT personnel or send from a look-alike external tenant.</p>
+        </div>
+        <div class="chain-step">
+          <div class="chain-num">3</div>
+          <p><strong>Quick Assist abuse:</strong> The attacker instructs the victim to open Quick Assist (a built-in Windows remote support tool) and share a session code. Once the victim complies, the attacker gains full remote control of the machine, including screen view and keyboard input.</p>
+        </div>
+        <div class="chain-step">
+          <div class="chain-num">4</div>
+          <p><strong>MSI installer deployment:</strong> The attacker silently installs digitally signed MSI files named <code>Update.msi</code> or <code>UpdateFX.msi</code>, hosted on personal Microsoft cloud storage to appear legitimate. These masquerade as Microsoft Teams components or CrossDeviceService.</p>
+        </div>
+        <div class="chain-step">
+          <div class="chain-num">5</div>
+          <p><strong>DLL sideloading:</strong> The MSI drops a malicious library (<code>hostfxr.dll</code>) alongside a legitimate Microsoft-signed binary. The trusted binary loads the malicious DLL, which decrypts and executes the A0Backdoor payload entirely in memory.</p>
+        </div>
+        <div class="chain-step">
+          <div class="chain-num">6</div>
+          <p><strong>A0Backdoor establishes covert persistence:</strong> The backdoor fingerprints the host, then opens a C2 channel via DNS MX queries to public resolvers (1.1.1.1, 8.8.8.8), embedding encoded commands in high-entropy subdomains. No direct connection to attacker infrastructure is made from the endpoint.</p>
+        </div>
+      </div>
+        </div>
+
+        <!-- 4. TECHNICAL DETAILS -->
+        <div class="section">
+          <div class="section-label">4. Technical Vulnerability Details</div>
+          <p>A0Backdoor is a sophisticated memory-resident backdoor engineered specifically to evade endpoint detection tools tuned to conventional malware patterns. Its technical design addresses each layer of a modern enterprise security stack.</p>
+
+          <div class="phase-grid">
+            <div class="phase-card">
+              <h4>Loader Evasion</h4>
+              <p>Decrypts its code only at runtime using AES with a SHA-256-derived key. Spawns excessive threads via <code>CreateThread</code> to crash debuggers. Checks for virtualization and sandbox environments before executing the next stage.</p>
+            </div>
+            <div class="phase-card">
+              <h4>Memory Execution</h4>
+              <p>Relocates itself to a new memory region and decrypts core routines in place. No payload is written to disk at any stage, bypassing file-based antivirus and EDR detections entirely.</p>
+            </div>
+            <div class="phase-card">
+              <h4>Host Fingerprinting</h4>
+              <p>Collects system information via Windows API calls including <code>DeviceIoControl</code>, <code>GetUserNameExW</code>, and <code>GetComputerNameW</code> to uniquely identify and profile the compromised host.</p>
+            </div>
+            <div class="phase-card">
+              <h4>DNS C2 Tunneling</h4>
+              <p>Issues MX record queries to public resolvers (1.1.1.1, 8.8.8.8). Command data is encoded in high-entropy subdomain labels. Responses embed instructions in MX record hostnames. Endpoint never contacts attacker infrastructure directly.</p>
+            </div>
+          </div>
+
+          <div class="impact-box" style="margin-top:20px;">
+            <div class="impact-label">Why DNS-Based C2 Is Particularly Hard to Detect</div>
+            <p>Because A0Backdoor routes all C2 traffic through trusted public DNS resolvers, traditional network detection methods that look for direct connections to attacker-controlled IPs or domains will not trigger. Detection requires DNS query log analysis for high-entropy subdomain patterns and anomalous MX record query volumes from internal endpoints.</p>
+          </div>
+        </div>
+
+        <!-- 5. AFFECTED SYSTEMS -->
+        <div class="section">
+          <div class="section-label">5. Affected Systems</div>
+           <table class="details-table">
+        <thead><tr><td colspan="2">Affected Configurations</td></tr></thead>
+        <tbody>
+          <tr><td class="key">Platform</td><td class="val">Windows (all versions with Quick Assist installed and Teams accessible)</td></tr>
+          <tr><td class="key">Entry Vector</td><td class="val">Microsoft Teams (external tenant message) + Windows Quick Assist (remote session)</td></tr>
+          <tr><td class="key">Malicious Files</td><td class="val"><code>Update.msi</code>, <code>UpdateFX.msi</code>, <code>hostfxr.dll</code> (malicious variant), CrossDeviceService spoofed DLLs</td></tr>
+          <tr><td class="key">Delivery Hosting</td><td class="val">Personal Microsoft cloud storage (my.microsoftpersonalcontent.com) with tokenized download URLs</td></tr>
+          <tr><td class="key">High-Risk Roles</td><td class="val">Any staff with Microsoft Teams access and Quick Assist enabled; IT support staff and executives are primary targets</td></tr>
+          <tr><td class="key">Unaffected</td><td class="val">Machines with Quick Assist disabled via Group Policy and Teams external access blocked; non-Windows endpoints</td></tr>
+        </tbody>
+      </table>
+        </div>
+
+        <!-- 6. RISK AND IMPACT -->
+    <div class="section">
+      <div class="section-label">6. Risk and Impact</div>
+      <div class="impact-box">
+        <div class="impact-label">Organizational Risk Summary for Nexviax Technologies</div>
+        <p>A successful A0Backdoor deployment gives the attacker persistent, covert access to the compromised machine and a springboard into Nexviax&rsquo;s internal network. For a cybersecurity consultancy, this means potential exposure of client network credentials, active incident response engagements, threat intelligence, and security tooling. The attacker&rsquo;s Black Basta affiliation indicates ransomware deployment is a likely end goal if the initial access is not detected and contained quickly.</p>
+      </div>
+      <p>The memory-resident nature of A0Backdoor means the malware survives standard antivirus scans and EDR file-based detections. Its DNS tunneling C2 channel can remain active for weeks or months without triggering conventional network alerts. The attacker has persistent interactive access and can exfiltrate data, move laterally, or deploy ransomware at a time of their choosing.</p>
+    </div>
+
+    <!-- 7. INDICATORS OF COMPROMISE -->
+    <div class="section">
+      <div class="section-label">7. Indicators of Compromise</div>
+      <table class="ioc-table">
+        <thead>
+          <tr>
+            <td style="width:170px;">Type</td>
+            <td>Indicator</td>
+            <td style="width:210px;">Recommended Action</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="type">Suspicious Teams Message</td>
+            <td>Unsolicited external tenant Teams message offering IT support, especially arriving shortly after an inbox spam surge</td>
+            <td>Do not engage; report to SOC; block sender tenant</td>
+          </tr>
+          <tr>
+            <td class="type">Quick Assist Session</td>
+            <td>Quick Assist remote session initiated to an unverified external party, particularly during or after an email bombing event</td>
+            <td>Terminate session immediately; isolate machine; alert SOC</td>
+          </tr>
+          <tr>
+            <td class="type">Malicious MSI File</td>
+            <td><code>Update.msi</code> or <code>UpdateFX.msi</code> present in user-writable directories (AppData, Temp) not associated with an authorized Teams update</td>
+            <td>Do not execute; preserve for forensics; isolate machine</td>
+          </tr>
+          <tr>
+            <td class="type">DLL Anomaly</td>
+            <td>Unexpected <code>hostfxr.dll</code> or CrossDeviceService DLL in user-profile directories; legitimate Microsoft binary loading an unsigned or unknown DLL from the same path</td>
+            <td>Terminate process; hash file; submit to threat intel platform</td>
+          </tr>
+          <tr>
+            <td class="type">DNS Anomaly</td>
+            <td>High volume of MX record queries from a single endpoint to public resolvers (1.1.1.1, 8.8.8.8) with high-entropy subdomain labels not matching known services</td>
+            <td>Alert SIEM; investigate endpoint; capture DNS traffic for analysis</td>
+          </tr>
+          <tr>
+            <td class="type">Anti-Debug Signal</td>
+            <td>Excessive thread creation from a Microsoft-branded process not associated with normal application behavior; debugger crash during analysis of a recently installed binary</td>
+            <td>Flag host for A0Backdoor investigation; escalate to IR team</td>
+          </tr>
+          <tr>
+            <td class="type">Cloud Storage Download</td>
+            <td>MSI or executable downloaded from <code>my.microsoftpersonalcontent.com</code> with a tokenized URL outside of a sanctioned software deployment workflow</td>
+            <td>Block URL at proxy; isolate endpoint; review download history</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- 8. DETECTION GUIDANCE -->
+    <div class="section">
+      <div class="section-label">8. Detection Guidance</div>
+      <p><strong>DNS Query Logging:</strong> Enable full DNS query logging on all endpoints and forward to SIEM. Create analytics rules alerting on: MX record query volume exceeding baseline from any single endpoint; subdomain labels with entropy scores above threshold (greater than 3.5 bits per character); repeated queries to public resolvers for domains with no prior resolution history.</p>
+      <p><strong>Teams External Access Monitoring:</strong> Review Microsoft Teams Admin Center for all active external tenant access configurations. Enable audit logging for all external tenant message events. Alert on any message from an external tenant where the display name contains IT support keywords (helpdesk, IT support, sysadmin, tech support) combined with a request to initiate a remote session.</p>
+      <p><strong>Quick Assist Session Logging:</strong> If Quick Assist cannot be disabled immediately, enable Windows event logging for Quick Assist session initiation events (Event ID 4688 with process name <code>QuickAssist.exe</code>). Alert on any Quick Assist session not preceded by a verified IT support ticket in your ITSM platform.</p>
+      <p><strong>DLL Sideloading Detection:</strong> Use Microsoft Defender for Endpoint ASR rules to block execution of unsigned DLLs loaded from user-writable directories. Alert on any Microsoft-signed binary loading a DLL from <code>%AppData%</code>, <code>%Temp%</code>, or <code>%LocalAppData%</code> that is not a known Microsoft component.</p>
+      <p><strong>Microsoft Sentinel:</strong> Deploy the Teams audit log connector and create a detection rule correlating: external tenant message received + Quick Assist process launch within 30 minutes + outbound DNS MX query spike on the same endpoint. This three-signal correlation covers the full A0Backdoor deployment chain.</p>
+    </div>
+
+    <!-- 9. MITIGATION STEPS -->
+    <div class="section">
+      <div class="section-label">9. Mitigation Steps</div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <p><strong>Disable Quick Assist via Group Policy</strong> across all endpoints where it is not an authorized IT support tool: Computer Configuration &gt; Administrative Templates &gt; System &gt; Quick Assist. For environments where Quick Assist is required, restrict it to named IT accounts only and enforce session logging.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <p><strong>Restrict external Teams access</strong> in Teams Admin Center. Set external access policies to block or require explicit approval for messages from unknown external tenants. Disable the ability for external users to initiate chats with internal staff unless there is a pre-existing approved relationship.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <p><strong>Issue an immediate staff awareness notice</strong> describing the email bombing and Teams impersonation pattern. Staff should be instructed to call the IT helpdesk on a known internal number to verify any unsolicited IT support contact received via Teams before taking any action.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <p><strong>Enable DNS query logging</strong> and deploy SIEM rules for high-entropy MX record query patterns from internal endpoints. Configure alerts for any endpoint issuing more than 50 MX queries per hour to public resolvers with subdomain labels not matching known mail infrastructure.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <p><strong>Deploy or verify Microsoft Defender for Endpoint ASR rules</strong> blocking execution of files from user-writable directories and DLL loading from AppData paths. Enable cloud-delivered protection and automatic sample submission to maximize detection coverage for the MSI installer variants.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">6</div>
+          <p>For any machine where a Quick Assist session was granted to an unverified party, <strong>treat the machine as fully compromised</strong>: isolate from network, preserve memory for forensic analysis, and initiate the incident response playbook for suspected A0Backdoor infection.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. BEST PRACTICES -->
+    <div class="section">
+      <div class="section-label">10. Security Best Practices</div>
+      <div class="practices">
+        <div class="practice-item"><span class="practice-star">&#9733;</span><div>Treat Microsoft Teams as an initial access channel, not just a collaboration tool. Apply the same skepticism to unsolicited Teams messages as to unsolicited emails. Implement Defender for Office 365 safe link and file scanning policies for Teams content in addition to email.</div></div>
+        <div class="practice-item"><span class="practice-star">&#9733;</span><div>Establish a verified IT support contact procedure: all IT support interactions must be initiated by the user through a known internal channel (ticketing system or internal helpdesk number), never in response to an unsolicited Teams message or call.</div></div>
+        <div class="practice-item"><span class="practice-star">&#9733;</span><div>Audit all remote support tools deployed in your environment (Quick Assist, TeamViewer, AnyDesk, etc.) and remove or restrict any not actively required for an authorized support function. Each of these tools is a potential initial access vector if left unmanaged.</div></div>
+        <div class="practice-item"><span class="practice-star">&#9733;</span><div>Implement application allow-listing via Microsoft Defender for Endpoint or AppLocker to prevent unauthorized executables and DLLs from running in user-writable directories. This control directly blocks the DLL sideloading technique used to deploy A0Backdoor.</div></div>
+        <div class="practice-item"><span class="practice-star">&#9733;</span><div>Run tabletop exercises simulating the email bombing and Teams impersonation scenario with representative staff from each team. Staff who have rehearsed the scenario are significantly more likely to recognize and report it than staff who have only read about it in awareness training.</div></div>
+        <div class="practice-item"><span class="practice-star">&#9733;</span><div>Subscribe to BlueVoyant, Microsoft MSRC, and CISA alerts for ongoing updates to the Blitz Brigantine campaign. This threat group has demonstrated a pattern of tooling refresh and certificate rotation, meaning IOCs and detection signatures will need to be updated as the campaign evolves.</div></div>
+        <div class="practice-item"><span class="practice-star">&#9733;</span><div>For cybersecurity consultancies specifically: maintain a clean, air-gapped incident response workstation that is never used for general communication. If a consultant&rsquo;s daily-use machine is compromised, client data and active engagement credentials should not be accessible from the same device.</div></div>
+      </div>
+    </div>
+
+        <!-- 11. REFERENCES -->
+        <div class="section">
+          <div class="section-label">11. References</div>
+          <div class="ref-list">
+            <div class="ref-item"><strong>BlueVoyant Research:</strong> New A0Backdoor Linked to Teams Impersonation and Quick Assist Social Engineering &mdash; <a href="https://www.bluevoyant.com/blog/new-a0backdoor-linked-to-teams-impersonation-and-quick-assist-social-engineering" target="_blank">bluevoyant.com</a></div>
+        <div class="ref-item"><strong>Cyber Security News:</strong> Attackers Abuse Microsoft Teams and Quick Assist to Drop Stealthy A0Backdoor &mdash; <a href="https://cybersecuritynews.com/hackers-attack-over-microsoft-teams/" target="_blank">cybersecuritynews.com</a></div>
+        <div class="ref-item"><strong>BleepingComputer:</strong> Microsoft Teams phishing targets employees with A0Backdoor malware &mdash; <a href="https://www.bleepingcomputer.com/news/security/microsoft-teams-phishing-targets-employees-with-backdoors/" target="_blank">bleepingcomputer.com</a></div>
+        <div class="ref-item"><strong>MITRE ATT&CK:</strong> T1566.004 &mdash; Phishing via Messaging Services &mdash; <a href="https://attack.mitre.org/techniques/T1566/004/" target="_blank">attack.mitre.org</a></div>
+        <div class="ref-item"><strong>MITRE ATT&CK:</strong> T1219 &mdash; Remote Access Software (Quick Assist Abuse) &mdash; <a href="https://attack.mitre.org/techniques/T1219/" target="_blank">attack.mitre.org</a></div>
+        <div class="ref-item"><strong>MITRE ATT&CK:</strong> T1574.002 &mdash; DLL Side-Loading &mdash; <a href="https://attack.mitre.org/techniques/T1574/002/" target="_blank">attack.mitre.org</a></div>
+        <div class="ref-item"><strong>MITRE ATT&CK:</strong> T1071.004 &mdash; Application Layer Protocol: DNS C2 &mdash; <a href="https://attack.mitre.org/techniques/T1071/004/" target="_blank">attack.mitre.org</a></div>
+        <div class="ref-item"><strong>Microsoft:</strong> Restricting Quick Assist via Group Policy &mdash; <a href="https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-remoteassistance" target="_blank">learn.microsoft.com</a></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FOOTER -->
+      <div class="footer">
+        <div class="footer-left">
+          <p>For assistance, contact <a href="mailto:info@nexviax.com">info@nexviax.com</a></p>
+          <p class="sub">Nexviax Technologies</p>
+        </div>
+        <div class="footer-right">Threat Advisory</div>
+      </div>
+    </div>
+  </div>
+<!-- Main Footer Section Start -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Header Start -->
+                <div class="col-lg-3 col-md-4 col-12">
+                    <div class="footer-links">
+                        <!-- Footer Logo Start -->
+                        <div class="footer-logo">
+                            <img src="../images/logo-dark.svg" alt="" />
+                            <div class="footer-social-links">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.linkedin.com/company/nexviax" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                        </li>
+                                        <li>
+                                        <a href="https://www.x.com/nexviax" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                        <a href="https://youtube.com/@nexviax" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                        </li>
+                                        <li>
+                                        <a href="https://medium.com/@nexviax" target="_blank"><i class="fa-brands fa-medium-m"></i></a>
+                                        </li>
+                                        </ul>
+                                        </div>
+                                        </div>
+                                        <!-- Footer Logo End -->
+                                        <!-- Footer Social Links End -->
+                                        </div>
+                                        </div>
+                                        
+                                        <div class="col-lg-4 col-md-4 col-5">
+                                            <!-- Footer Links Start -->
+                                            <div class="footer-links footer-quick-links">
+                                                <h3>Quick links</h3>
+                                                <ul>
+                                                    <li><a href="../index.html#index">home</a></li>
+                                                    <li><a href="../index.html#abouts-us">about us</a></li>
+                                                    <li><a href="../index.html#our-services">services</a></li>
+                                                    <li><a href="../index.html#faq">FAQ</a></li>
+                                                    <li><a href="../index.html#blogs">blogs</a></li>
+                                                    <li><a href="../privacy.html">Privacy policy</a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- Footer Links End -->
+                                        </div>
+                                        
+                                        <div class="col-lg-5 col-md-4 col-7">
+                                            <!-- Footer Links Start -->
+                                            <div class="footer-links">
+                                                <h3>Contact</h3>
+                                                <ul>
+                                                    <li>
+                                                        <span class="footer-contact-section">
+                                    <img src="../images/icon-phone-accent-white.svg" /><a href="tel:+918807959368">+91
+                                        88079 59368</a>
+                                </span>
+                                </li>
+                                <li>
+                                    <span class="footer-contact-section">
+                                    <img src="../images/icon-mail-accent-white.svg" /><a href="mailto:info@nexviax.com"
+                                        class="footer-email-text">info@nexviax.com</a>
+                                    </span>
+                                    </li>
+                                    <li class="footer-email-text">
+                                        <span class="footer-contact-location-section">
+                                            <img src="../images/icon-location-white.svg" />
+                                            <p>
+                                                3rd Floor, Maestro Building, S.P. Garden, Kappi Kadai,
+                                                Vilankurichi, Coimbatore 641035, Tamil Nadu, India
+                                            </p>
+                                        </span>
+                                    </li>
+                                    </ul>
+                    </div>
+                    <!-- Footer Links End -->
+                </div>
+            </div>
+            </div>
+            
+            <!-- Footer Copyright Start -->
+            <div class="footer-copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- Footer Copyright Text Start -->
+                            <div class="footer-copyright-text">
+                                <p>Copyright © 2026 All Rights Reserved.</p>
+                            </div>
+                            <!-- Footer Copyright Text End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Copyright End -->
+    </footer>
+    <!-- Jquery Library File -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="../js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="../js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/jquery.counterup.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="../js/SmoothScroll.js"></script>
+    <!-- Parallax js -->
+    <script src="../js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="../js/gsap.min.js"></script>
+
+    <!-- Text Effect js file -->
+    <script src="../js/SplitText.js"></script>
+    <script src="../js/ScrollTrigger.min.js"></script>
+    <!-- YTPlayer js File -->
+    <script src="../js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Wow js file -->
+    <script src="../js/wow.min.js"></script>
+    <script src="advisory-init.js"></script>
+    <!-- Main Footer Section End -->
+</body>
+</html>

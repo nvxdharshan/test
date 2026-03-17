@@ -10,6 +10,17 @@
     "tags": ["MFA", "Deep Link", "Mobile", "Microsoft"],
     "excerpt": "A malicious app on the same device can intercept one-time codes or deep links, enabling MFA bypass without password theft.",
     "href": "NVX-2026-006.html"
+  },
+  {
+    "id": "NVX-2026-008",
+    "title": "Attackers Impersonating IT Support via Microsoft Teams to Deploy Backdoor",
+    "date": "2026-03-16",
+    "severity": "High",
+    "cvss": 8.8,
+    "product": "Microsoft Teams",
+    "tags": ["Teams", "Microsoft"],
+    "excerpt": "Attackers Abuse Microsoft Teams and Quick Assist to Deploy Stealthy A0Backdoor Malware",
+    "href": "NVX-2026-008.html"
   }
 ]
 

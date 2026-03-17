@@ -78,11 +78,19 @@
 .section p { font-size:16px; color:var(--text); line-height:1.8; margin-bottom:12px; }
 .section p:last-child { margin-bottom:0; }
 
+
+.critical-box { background:#FEF2F2; border:1px solid #FECACA; border-left:4px solid #DC2626; padding:18px 22px; margin:18px 0; }
+.critical-box .critical-label { font-size:10px; font-weight:700; color:#991B1B; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px; }
+.critical-box p { font-size:14px; color:#374151; line-height:1.8; margin:0; }
   /* ---- IMPACT BOX ---- */
 .impact-box { background:#fffbeb; border:1px solid var(--amber-200); border-left:4px solid var(--amber-500); padding:18px 22px; margin:18px 0; }
 .impact-box .impact-label { font-size:16px; font-weight:700; color:var(--amber-700); letter-spacing:2px; text-transform:uppercase; margin-bottom:8px; }
 .impact-box p { font-size:16px; color:var(--text); line-height:1.8; }
 
+.phase-grid { display:flex; gap:16px; margin-top:16px; flex-wrap:wrap; }
+.phase-card { flex:1; min-width:180px; background:#F8FAFF; border:1px solid #E2E8F0; border-top:3px solid #0A2647; padding:16px 18px; }
+.phase-card h4 { font-size:12px; color:#0A2647; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px; }
+.phase-card p { font-size:13px; color:#4B5563; line-height:1.7; margin:0; }
   /* ---- DETAILS TABLE ---- */
 .details-table { width:100%; border-collapse:collapse; border:1px solid var(--border); font-size:16px; margin:16px 0; }
 .details-table thead td { background:var(--navy); color:#a8c4e0; font-size:16px; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:14px 18px; }
@@ -104,6 +112,12 @@
 .ioc-table .type { font-weight:700; color:var(--navy); white-space:nowrap; }
 .ioc-table .ioc-col-type { width:180px; }
 .ioc-table .ioc-col-action { width:200px; }
+
+.attack-chain { margin-top:16px; }
+.chain-step { display:flex; align-items:flex-start; gap:14px; margin-bottom:10px; }
+.chain-num { width:28px; height:28px; min-width:28px; background:#0A2647; color:#ffffff; font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px; }
+.chain-step p { font-size:14px; color:#1F2937; line-height:1.65; margin:0; }
+.chain-step p strong { color:#0A2647; }
 
   /* ---- AFFECTED SURFACES ---- */
 .surfaces { display:flex; gap:16px; margin-top:16px; flex-wrap:wrap; }
