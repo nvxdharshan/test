@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexviax Technologies - ADVISORY_ID</title>
+
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+
+  <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen" />
+  <link href="../css/slicknav.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+  <link href="../css/all.min.css" rel="stylesheet" media="screen" />
+  <link href="../css/animate.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/magnific-popup.css" />
+  <link rel="stylesheet" href="../css/mousecursor.css" />
+  <link href="../css/custom.css" rel="stylesheet" media="screen" />
+
+  <link href="advisory.css" rel="stylesheet" media="screen" />
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="header-sticky">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../images/logo.svg" alt="Logo" />
+          </a>
+
+          <div class="collapse navbar-collapse main-menu">
+            <div class="nav-menu-wrapper">
+              <ul class="navbar-nav mr-auto" id="menu">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#abouts-us">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#our-services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#faq">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#blogs">Blogs</a></li>
+                <li class="nav-item"><a class="nav-link" href="../contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div class="header-btn">
+              <a href="../contact.html" class="btn-default">get started</a>
+            </div>
+          </div>
+
+          <div class="navbar-toggle"></div>
+        </div>
+      </nav>
+      <div class="responsive-menu"></div>
+    </div>
+  </header>
+
+  <div class="page-wrap">
+    <nav class="advisory-breadcrumb" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html">Advisories</a></li>
+        <li class="breadcrumb-item active" aria-current="page">ADVISORY_ID</li>
+      </ol>
+    </nav>
+
+    <div class="advisory-shell">
+      <!-- HEADER -->
+      <div class="header">
+        <div class="header-inner">
+          <div class="brand">
+            <div class="brand-logo">
+              <img src="../images/favicon.png" alt="Logo" />
+            </div>
+            <div class="brand-text">
+              <h1>NEXVIAX</h1>
+              <p>Ensuring Security, Powering Growth</p>
+            </div>
+          </div>
+
+          <div class="header-meta">
+            <div class="label">Full Threat Advisory</div>
+            <div class="value">ADVISORY_ID &nbsp;|&nbsp; PUBLISHED_DATE_LONG</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEVERITY BAR -->
+      <!-- Change the background color inline if you want different severity colors per advisory -->
+      <div class="severity-bar" style="background: SEVERITY_HEX;">
+        <div class="label">SEVERITY_TEXT &nbsp;&rsaquo;&nbsp; SHORT_HEADLINE</div>
+        <div class="cvss">CVSS &nbsp;<strong>CVSS_SCORE</strong>&nbsp;/ 10</div>
+      </div>
+
+      <!-- TITLE CARD -->
+      <div class="title-card">
+        <div class="advisory-id-badge">ADVISORY_ID &nbsp;|&nbsp; CVE_ID_OR_NA</div>
+        <h2>FULL_TITLE_LINE_1<br />FULL_TITLE_LINE_2_OPTIONAL</h2>
+        <div class="meta-row">
+          <span><strong>Published:</strong> PUBLISHED_DATE_LONG</span>
+          <span><strong>CVE:</strong> CVE_ID_OR_NA</span>
+          <span><strong>Severity:</strong> SEVERITY_TEXT (CVSS CVSS_SCORE)</span>
+          <span><strong>Patch Available:</strong> Yes/No</span>
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="content">
+
+        <!-- 1. THREAT OVERVIEW -->
+        <div class="section">
+          <div class="section-label">1. Threat Overview</div>
+          <p>PARAGRAPH_1</p>
+          <p>PARAGRAPH_2</p>
+        </div>
+
+        <!-- 2. AFFECTED SYSTEMS -->
+        <div class="section">
+          <div class="section-label">2. Affected Systems</div>
+          <table class="details-table">
+            <thead><tr><td colspan="2">Affected Configurations</td></tr></thead>
+            <tbody>
+              <tr><td class="key">Product</td><td class="val">PRODUCT_NAME</td></tr>
+              <tr><td class="key">Platforms</td><td class="val">PLATFORMS</td></tr>
+              <tr><td class="key">Affected Versions</td><td class="val amber">VERSION_RANGE</td></tr>
+              <tr><td class="key">Unaffected</td><td class="val">UNAFFECTED_DETAILS</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 3. RISK AND IMPACT -->
+        <div class="section">
+          <div class="section-label">3. Risk and Impact</div>
+          <div class="impact-box">
+            <div class="impact-label">Organizational Risk Summary</div>
+            <p>RISK_SUMMARY</p>
+          </div>
+          <p>IMPACT_DETAILS</p>
+        </div>
+
+        <!-- 4. INDICATORS OF COMPROMISE -->
+        <div class="section">
+          <div class="section-label">4. Indicators of Compromise</div>
+          <p>IOC_INTRO</p>
+
+          <table class="ioc-table">
+            <thead>
+              <tr>
+                <td class="ioc-col-type">Type</td>
+                <td>Indicator</td>
+                <td class="ioc-col-action">Recommended Action</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="type">TYPE</td>
+                <td>INDICATOR_TEXT</td>
+                <td>ACTION_TEXT</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 5. MITIGATION STEPS -->
+        <div class="section">
+          <div class="section-label">5. Mitigation Steps</div>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">1</div>
+              <p><strong>STEP_TITLE:</strong> STEP_DETAILS</p>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <p><strong>STEP_TITLE:</strong> STEP_DETAILS</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. REFERENCES -->
+        <div class="section">
+          <div class="section-label">6. References</div>
+          <div class="ref-list">
+            <div class="ref-item"><strong>Vendor advisory:</strong> <a href="URL" target="_blank" rel="noopener">URL</a></div>
+            <div class="ref-item"><strong>CVE:</strong> <a href="URL" target="_blank" rel="noopener">URL</a></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FOOTER -->
+      <div class="footer">
+        <div class="footer-left">
+          <p>For assistance, contact <a href="mailto:info@nexviax.com">info@nexviax.com</a></p>
+          <p class="sub">Nexviax Technologies</p>
+        </div>
+        <div class="footer-right">Threat Advisory</div>
+      </div>
+    </div>
+  </div>
+<!-- Main Footer Section Start -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Header Start -->
+                <div class="col-lg-3 col-md-4 col-12">
+                    <div class="footer-links">
+                        <!-- Footer Logo Start -->
+                        <div class="footer-logo">
+                            <img src="../images/logo-dark.svg" alt="" />
+                            <div class="footer-social-links">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.linkedin.com/company/nexviax" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                        </li>
+                                        <li>
+                                        <a href="https://www.x.com/nexviax" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                        <a href="https://youtube.com/@nexviax" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                        </li>
+                                        <li>
+                                        <a href="https://medium.com/@nexviax" target="_blank"><i class="fa-brands fa-medium-m"></i></a>
+                                        </li>
+                                        </ul>
+                                        </div>
+                                        </div>
+                                        <!-- Footer Logo End -->
+                                        <!-- Footer Social Links End -->
+                                        </div>
+                                        </div>
+                                        
+                                        <div class="col-lg-4 col-md-4 col-5">
+                                            <!-- Footer Links Start -->
+                                            <div class="footer-links footer-quick-links">
+                                                <h3>Quick links</h3>
+                                                <ul>
+                                                    <li><a href="../index.html#index">home</a></li>
+                                                    <li><a href="../index.html#abouts-us">about us</a></li>
+                                                    <li><a href="../index.html#our-services">services</a></li>
+                                                    <li><a href="../index.html#faq">FAQ</a></li>
+                                                    <li><a href="../index.html#blogs">blogs</a></li>
+                                                    <li><a href="../privacy.html">Privacy policy</a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- Footer Links End -->
+                                        </div>
+                                        
+                                        <div class="col-lg-5 col-md-4 col-7">
+                                            <!-- Footer Links Start -->
+                                            <div class="footer-links">
+                                                <h3>Contact</h3>
+                                                <ul>
+                                                    <li>
+                                                        <span class="footer-contact-section">
+                                    <img src="../images/icon-phone-accent-white.svg" /><a href="tel:+918807959368">+91
+                                        88079 59368</a>
+                                </span>
+                                </li>
+                                <li>
+                                    <span class="footer-contact-section">
+                                    <img src="../images/icon-mail-accent-white.svg" /><a href="mailto:info@nexviax.com"
+                                        class="footer-email-text">info@nexviax.com</a>
+                                    </span>
+                                    </li>
+                                    <li class="footer-email-text">
+                                        <span class="footer-contact-location-section">
+                                            <img src="../images/icon-location-white.svg" />
+                                            <p>
+                                                3rd Floor, Maestro Building, S.P. Garden, Kappi Kadai,
+                                                Vilankurichi, Coimbatore 641035, Tamil Nadu, India
+                                            </p>
+                                        </span>
+                                    </li>
+                                    </ul>
+                    </div>
+                    <!-- Footer Links End -->
+                </div>
+            </div>
+            </div>
+            
+            <!-- Footer Copyright Start -->
+            <div class="footer-copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- Footer Copyright Text Start -->
+                            <div class="footer-copyright-text">
+                                <p>Copyright © 2026 All Rights Reserved.</p>
+                            </div>
+                            <!-- Footer Copyright Text End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Copyright End -->
+    </footer>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.slicknav.js"></script>
+  <script src="../js/wow.min.js"></script>
+  <script src="advisory-init.js"></script>
+</body>
+</html>
