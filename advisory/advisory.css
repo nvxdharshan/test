@@ -3,6 +3,13 @@
   Scoped to `.page-wrap` to avoid leaking into the main site CSS.
 */
 
+body.advisory-page {
+  margin: 0;
+  font-family: "Trebuchet MS", Calibri, Verdana, sans-serif;
+  background: #eef1f5;
+  color: #1f2937;
+}
+
 .page-wrap {
   /* Advisory-specific palette (do not inherit site theme colors) */
   --navy: #0a2647;
@@ -31,6 +38,10 @@
   color: var(--text);
 }
 
+.page-wrap.standalone-advisory {
+  padding: 40px 20px 60px;
+}
+
 .page-wrap *,
 .page-wrap *::before,
 .page-wrap *::after {
@@ -47,7 +58,9 @@
 }
 .header-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
 .brand { display:flex; align-items:center; gap:16px; }
+.brand > img { display:block; width:52px; height:52px; object-fit:contain; }
 .brand-logo { width:48px; height:48px; display:flex; align-items:center; justify-content:center; }
+.brand-logo img { display:block; width:100%; height:100%; object-fit:contain; }
 .brand-text h1 { font-size:20px; color:#e8f0fe; letter-spacing:2px; }
 .brand-text p { font-size:16px; color:var(--white); letter-spacing:1.5px; text-transform:uppercase; margin-top:3px; margin-bottom: 0; }
 .header-meta { text-align:right; }
@@ -57,6 +70,8 @@
   /* ---- SEVERITY BANNER ---- */
 .severity-bar { background:var(--amber); padding:12px var(--pad-x); display:flex; align-items:center; justify-content:space-between; gap:12px; }
 .severity-bar .label { font-size:12px; font-weight:700; color:var(--amber-100); letter-spacing:2px; text-transform:uppercase; }
+.severity-bar.severity-critical { background:#dc2626; }
+.severity-bar.severity-critical .label { color:#fee2e2; }
 .cvss { font-size:18px; color:var(--white); white-space:nowrap; }
 .cvss strong { font-size:18px; color:inherit; }
 
@@ -77,6 +92,26 @@
 .section-label { font-size:18px; font-weight:700; color:var(--teal); letter-spacing:2px; text-transform:uppercase; margin-bottom:14px; padding-bottom:8px; border-bottom:2px solid var(--teal); display:inline-block; }
 .section p { font-size:16px; color:var(--text); line-height:1.8; margin-bottom:12px; }
 .section p:last-child { margin-bottom:0; }
+.section code,
+.details-table code,
+.ioc-table code,
+.step p code {
+  background:#f3f4f6;
+  border-radius:4px;
+  padding:1px 6px;
+  font-family:Consolas, "Courier New", monospace;
+  font-size:0.9em;
+}
+
+.section code,
+.details-table code,
+.step p code {
+  color:var(--navy);
+}
+
+.ioc-table code {
+  color:#dc2626;
+}
 
 
 .critical-box { background:#FEF2F2; border:1px solid #FECACA; border-left:4px solid #DC2626; padding:18px 22px; margin:18px 0; }
@@ -111,6 +146,7 @@
 .ioc-table td { padding:11px 16px; border-bottom:1px solid var(--soft-border); color:var(--text); vertical-align:top; border:1px solid var(--border); }
 .ioc-table .type { font-weight:700; color:var(--navy); white-space:nowrap; }
 .ioc-table .ioc-col-type { width:180px; }
+.ioc-table .ioc-col-indicator { width:280px; }
 .ioc-table .ioc-col-action { width:200px; }
 
 .attack-chain { margin-top:16px; }

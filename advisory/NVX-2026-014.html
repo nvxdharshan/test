@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexviax Technologies - NVX-2026-014</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="../css/slicknav.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link href="../css/all.min.css" rel="stylesheet" media="screen" />
+    <link href="../css/animate.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/magnific-popup.css" />
+    <link rel="stylesheet" href="../css/mousecursor.css" />
+    <link href="../css/custom.css" rel="stylesheet" media="screen" />
+    <link href="advisory.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-sticky">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../images/logo.svg" alt="Logo" />
+                    </a>
+                    <div class="collapse navbar-collapse main-menu">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">
+                                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="../index.html#abouts-us">About Us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="../index.html#our-services">Services</a></li>
+                                <li class="nav-item"><a class="nav-link" href="../index.html#faq">FAQ</a></li>
+                                <li class="nav-item"><a class="nav-link" href="../index.html#blogs">Blogs</a></li>
+                                <li class="nav-item"><a class="nav-link" href="../contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="header-btn">
+                            <a href="../contact.html" class="btn-default">get started</a>
+                        </div>
+                    </div>
+                    <div class="navbar-toggle"></div>
+                </div>
+            </nav>
+            <div class="responsive-menu"></div>
+        </div>
+    </header>
+
+<div class="page-wrap">
+  <nav class="advisory-breadcrumb" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Advisories</a></li>
+      <li class="breadcrumb-item active" aria-current="page">NVX-2026-014</li>
+    </ol>
+  </nav>
+
+  <div class="advisory-shell">
+
+    <div class="header">
+      <div class="header-inner">
+        <div class="brand">
+          <div class="brand-logo">
+            <span><img src="../images/favicon.png" alt="Logo" /></span>
+          </div>
+          <div class="brand-text">
+            <h1>NEXVIAX</h1>
+            <p>Ensuring Security, Powering Growth</p>
+          </div>
+        </div>
+        <div class="header-meta">
+          <div class="label">Full Threat Advisory</div>
+          <div class="value">NVX-2026-014 &nbsp;|&nbsp; 18 March 2026</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="severity-bar">
+      <div class="label">MEDIUM SEVERITY &nbsp;&rsaquo;&nbsp; Apple WebKit Same Origin Policy Bypass via Navigation API</div>
+      <div class="cvss">CVSS &nbsp;<strong>6.5</strong>&nbsp;/ 10</div>
+    </div>
+
+    <div class="title-card">
+      <div class="advisory-id-badge">NVX-2026-014 &nbsp;|&nbsp; CVE-2026-20643</div>
+      <h2>Apple WebKit Vulnerability Enables<br>Same Origin Policy Bypass on iOS, iPadOS, and macOS</h2>
+      <div class="meta-row">
+        <span><strong>Published:</strong> 18 March 2026</span>
+        <span><strong>CVE:</strong> CVE-2026-20643</span>
+        <span><strong>Severity:</strong> Medium (CVSS 6.5)</span>
+        <span><strong>Patch Available:</strong> Yes</span>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <div class="section">
+        <div class="section-label">1. Threat Overview</div>
+        <p>Apple shipped its first Background Security Improvement (BSI) update on 17 March 2026 to fix a cross origin flaw in WebKit&rsquo;s Navigation API, tracked as CVE-2026-20643. The vulnerability lets maliciously crafted web content get around the Same Origin Policy (SOP), which is the browser control that stops scripts on one site from reading data belonging to a completely different site. No native code execution is needed; loading a crafted page in Safari or any other WebKit based browser on an unpatched device is enough to trigger it.</p>
+        <p>Apple has not confirmed active exploitation at this time, but WebKit sits at the centre of all web content processing on Apple platforms, so the exposure window matters. Every day a device goes unpatched is a day it can be targeted simply by pointing a user at the wrong URL.</p>
+      </div>
+
+      <div class="section">
+        <div class="section-label">2. Background</div>
+        <p>WebKit is the rendering engine behind Safari and, on iOS and iPadOS, it is also what every third-party browser must use. Apple policy requires all App Store browsers to render web content through WebKit, so CVE-2026-20643 affects Chrome, Firefox, Edge, and every other browser on iPhone and iPad just as much as it affects Safari. Switching browsers on a mobile Apple device offers no protection here.</p>
+        <p>The Same Origin Policy defines what a script loaded from one origin (scheme + host + port) is allowed to do with content from a different origin. Its whole job is to keep one website out of another website&rsquo;s data. When an authenticated user has their bank, email, or a corporate portal open in the same browser session as an attacker&rsquo;s page, SOP is what keeps that attacker&rsquo;s JavaScript from silently reading the other tabs.</p>
+        <p>The Navigation API is a browser interface that gives JavaScript control over navigation history and routing. The flaw in WebKit&rsquo;s Navigation API implementation meant that a page could use that interface to cross the origin boundary and interact with content it had no right to touch. Apple&rsquo;s fix tightened input validation inside the relevant Navigation API handling code.</p>
+        <p>The BSI mechanism itself is new. Introduced alongside iOS 26.1, iPadOS 26.1, and macOS 26.1, it lets Apple push small, targeted patches to high risk components like WebKit between full OS releases. This advisory is the first time Apple has used BSI to address a publicly disclosed security vulnerability.</p>
+      </div>
+
+      <div class="section">
+        <div class="section-label">3. Technical Vulnerability Details</div>
+        <p>CVE-2026-20643 is a cross origin issue caused by insufficient input validation in WebKit&rsquo;s Navigation API. The API failed to properly enforce the origin boundary during certain navigation operations, allowing the initiating page&rsquo;s JavaScript context to reach data it should not have been able to access. The three main ways this plays out in practice are shown below.</p>
+
+        <div class="surfaces">
+          <div class="surface-card">
+            <h4>Cross Origin Data Exposure</h4>
+            <p>A malicious page can read or infer content from a different origin active in the same session, including authenticated responses from webmail, internal portals, or financial applications the user has open.</p>
+          </div>
+          <div class="surface-card">
+            <h4>Session and Cookie Theft</h4>
+            <p>With SOP bypassed, a malicious script can reach session tokens or authentication state from a neighbouring origin, making account takeover possible without any phishing step or credential input from the victim.</p>
+          </div>
+          <div class="surface-card">
+            <h4>Navigation State Manipulation</h4>
+            <p>The flaw may allow an attacker to interfere with browser history or navigation events across origin boundaries, opening the door to content spoofing or silent redirects that appear to come from a trusted site.</p>
+          </div>
+        </div>
+
+        <div class="impact-box">
+          <div class="impact-label">Exploitation Preconditions</div>
+          <p>The only thing required is that the victim loads the malicious page on an unpatched device. No extra app installation, no elevated permissions, no additional user action beyond the page load itself. The attack is deliverable through a phishing link, a malicious ad, a QR code redirect, or a compromised page on an otherwise legitimate website.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">4. How the Attack Works</div>
+        <p>The attacker builds a webpage that abuses the Navigation API flaw. That page can be hosted on a domain the attacker controls or pushed through a compromised ad slot on a site the victim already trusts. The page loads without anything appearing out of the ordinary to the user.</p>
+        <p>Once the page is loaded in a vulnerable WebKit browser, its JavaScript calls the Navigation API in a way that crosses the origin boundary. If the user is logged into a corporate application, email, or any other authenticated service in the same browser session, the script can pull content or tokens from that session. All of this happens in the background with no error message and no browser warning.</p>
+        <p>The stolen data is sent back to the attacker over a normal HTTPS request. Because the browser shows nothing unusual, the victim typically has no way to know the session was compromised until the attacker acts on the access.</p>
+
+        <div class="attack-chain">
+          <div class="chain-step">
+            <div class="chain-num">1</div>
+            <p><strong>Delivery:</strong> Attacker hosts the exploit page or injects it into a trusted site via a compromised ad network, a stored XSS flaw, or a supply chain compromise.</p>
+          </div>
+          <div class="chain-step">
+            <div class="chain-num">2</div>
+            <p><strong>Trigger:</strong> Victim visits the page on an unpatched iPhone, iPad, or Mac using any browser. On iOS and iPadOS, all browsers use WebKit, so there is no safe alternative to switch to.</p>
+          </div>
+          <div class="chain-step">
+            <div class="chain-num">3</div>
+            <p><strong>Exploit:</strong> The page&rsquo;s JavaScript calls the Navigation API in a way that bypasses the Same Origin Policy and accesses data from a different origin in the active browser session.</p>
+          </div>
+          <div class="chain-step">
+            <div class="chain-num">4</div>
+            <p><strong>Exfiltration:</strong> Extracted tokens or page content are sent to the attacker&rsquo;s server via a background HTTPS call. The victim sees no alert and the browser gives no indication anything went wrong.</p>
+          </div>
+          <div class="chain-step">
+            <div class="chain-num">5</div>
+            <p><strong>Post Exploitation:</strong> The attacker replays the stolen session token to access corporate applications, email, or cloud resources tied to the victim&rsquo;s account, often before the victim is even aware there was a problem.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">5. Affected Systems</div>
+        <table class="details-table">
+          <thead><tr><td colspan="2">Affected Configurations</td></tr></thead>
+          <tbody>
+            <tr><td class="key">Product</td><td class="val">Apple WebKit (Safari browser engine)</td></tr>
+            <tr><td class="key">Platforms</td><td class="val">iOS, iPadOS, macOS Tahoe</td></tr>
+            <tr><td class="key">Affected Versions</td><td class="val amber">iOS 26.3.1, iPadOS 26.3.1, macOS 26.3.1 and macOS 26.3.2 prior to the BSI patch</td></tr>
+            <tr><td class="key">Patched Versions</td><td class="val">iOS 26.3.1 (a), iPadOS 26.3.1 (a), macOS 26.3.1 (a), macOS 26.3.2 (a)</td></tr>
+            <tr><td class="key">Browser Scope</td><td class="val amber">All browsers on iOS and iPadOS are affected. Apple requires all App Store browsers to use WebKit for rendering.</td></tr>
+            <tr><td class="key">Unaffected</td><td class="val">Devices on older OS versions will receive the fix via the standard Software Update channel rather than BSI. Devices already on a patched BSI release are not affected.</td></tr>
+            <tr><td class="key">Credited Researcher</td><td class="val">Thomas Espach</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <div class="section-label">6. Risk and Impact</div>
+        <div class="impact-box">
+          <div class="impact-label">Organizational Risk Summary</div>
+          <p>Any staff member using an unpatched Apple device to access corporate web applications, SaaS tools, or webmail is at risk of having their active session compromised through a single page load. On iOS and iPadOS there is no safer browser to fall back on. The attack leaves no file on the device, requires no malware, and needs no credentials from the victim. The only fix is the patch.</p>
+        </div>
+        <p>Remote workers accessing internal portals or admin consoles from iPhones, iPads, or MacBooks represent the highest risk group. A successful exploit gives the attacker whatever access the victim&rsquo;s account carries: SSO federated applications, cloud management dashboards, and sensitive business data, all without triggering a login event that would appear in authentication logs.</p>
+        <p>Beyond the immediate access risk, organizations face potential regulatory exposure if stolen sessions were used to reach personal data covered by GDPR, HIPAA, or similar frameworks. Attribution is also harder than with conventional breaches because the attack leaves no persistent artefact on the victim device and no anomalous authentication event in the IdP.</p>
+      </div>
+
+      <div class="section">
+        <div class="section-label">7. Indicators of Compromise</div>
+        <p>Browser based SOP bypass attacks are hard to catch at the endpoint because they leave nothing on disk. Detection depends on spotting the downstream effects in application and identity provider logs. The signals below are worth investigating, particularly when more than one appears together.</p>
+        <table class="ioc-table">
+          <thead>
+            <tr>
+              <td class="ioc-col-type">Type</td>
+              <td>Indicator</td>
+              <td class="ioc-col-action">Recommended Action</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="type">Anomalous Session Use</td>
+              <td>Authenticated session token used from a location or network that does not match the user&rsquo;s normal pattern, with no new login event recorded</td>
+              <td>Invalidate the session; force reauthentication; review IdP logs</td>
+            </tr>
+            <tr>
+              <td class="type">Unusual Data Access</td>
+              <td>Bulk read activity on files, emails, or records from a known account during or just after a browser session, inconsistent with that user&rsquo;s typical behaviour</td>
+              <td>Alert SOC; initiate account compromise response playbook</td>
+            </tr>
+            <tr>
+              <td class="type">Suspicious Outbound Request</td>
+              <td>Browser initiated HTTPS request to a newly registered or low reputation domain fired immediately after the user visits an unfamiliar page</td>
+              <td>Block the domain at the proxy; capture and examine the request payload</td>
+            </tr>
+            <tr>
+              <td class="type">Navigation API Abuse</td>
+              <td>WAF or browser isolation logs recording unexpected cross origin Navigation API calls or history manipulation within a single session</td>
+              <td>Review the session for further exploitation indicators; escalate to the security team</td>
+            </tr>
+            <tr>
+              <td class="type">Unpatched Device on Network</td>
+              <td>MDM telemetry showing Apple devices without the BSI patch connecting to corporate resources</td>
+              <td>Block corporate access until the device is patched; notify the device owner</td>
+            </tr>
+            <tr>
+              <td class="type">Token Replay</td>
+              <td>OAuth or session token submitted from a user agent or IP that does not match the context in which the token was originally issued</td>
+              <td>Revoke the token; check the source IP; pull IdP token issuance logs for the affected account</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <div class="section-label">8. Detection Guidance</div>
+        <p><strong>MDM and UEM Device Compliance:</strong> Update compliance policies in Jamf, Intune, or Workspace ONE to flag any Apple device below iOS/iPadOS 26.3.1(a) or macOS 26.3.1(a)/26.3.2(a) as out of compliance. Block corporate application access from those devices until the BSI patch is confirmed. The BSI patch level appears as a suffix on the version string and may need to be tracked separately from the main OS version in your MDM queries.</p>
+        <p><strong>Identity Provider Session Monitoring:</strong> Turn on anomalous session detection in your IdP (Okta, Azure Entra ID, Ping Identity, or equivalent). Set alerts for session token reuse from unexpected locations or user agents within a short window of a normal browser session. Configure automatic session invalidation for logins scored as high risk.</p>
+        <p><strong>Web Proxy and Secure Web Gateway:</strong> Check outbound browser traffic for POST or GET requests to newly registered or unknown domains originating from WebKit user agents on Apple devices. Organizations running browser isolation send web content to a remote cloud container, which removes WebKit exploits entirely from the picture for covered users.</p>
+        <p><strong>Web Application Access Logs:</strong> Enable detailed logging on internal applications to catch unusual read volumes, unexpected admin actions, or off hours access that could point to session token abuse. Cross reference access timestamps against the affected user&rsquo;s known working patterns to surface anything that stands out.</p>
+      </div>
+
+      <div class="section">
+        <div class="section-label">9. Mitigation Steps</div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <p><strong>Apply the Background Security Improvement now.</strong> On iPhone and iPad: <code>Settings &rarr; Privacy &amp; Security &rarr; Background Security Improvements</code>, then tap Install. On Mac: <code>System Settings &rarr; Privacy &amp; Security &rarr; Background Security Improvements</code>. Switch on automatic installation so future BSI patches go in without requiring manual steps each time. Confirmed safe versions are iOS 26.3.1 (a), iPadOS 26.3.1 (a), macOS 26.3.1 (a), and macOS 26.3.2 (a).</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <p><strong>Notify staff today.</strong> Push an IT notice to everyone using Apple devices for work and set a 48-hour deadline for confirming the patch is installed. Include step-by-step instructions. Make it clear that changing browsers on iPhone or iPad does not help since every App Store browser uses WebKit.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <p><strong>Enforce compliance through MDM.</strong> Update your compliance policy to require the BSI patch level. Any device that cannot confirm it is on the patched release should be blocked from corporate applications, email, and VPN until it is. Verify that your MDM platform can read the (a) suffix on the version string, as some tools may not capture BSI patch status automatically.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <p><strong>Check IdP logs going back 14 days.</strong> Look for session token reuse from unexpected locations, unusual access from Apple device user agents, and any bulk data reads that stand out. Revoke sessions for any account that looks off and require reauthentication from a patched device before restoring access.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">5</div>
+            <p><strong>Turn on Browser Isolation for sensitive applications.</strong> Rendering web content in a remote container takes WebKit out of the equation for managed users, which provides real protection even on devices that have not yet received the patch. This is the strongest interim control available while patch deployment is in progress.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">6</div>
+            <p><strong>For devices on older OS versions</strong> that are not yet eligible for BSI delivery, make sure the standard OS update is applied via <code>Settings &rarr; General &rarr; Software Update</code>. Apple bundles the WebKit fix into the regular update path for those devices. Until the update goes in, advise affected users to stay off authenticated web sessions on sensitive corporate or personal accounts.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">10. Security Best Practices</div>
+        <div class="practices">
+          <div class="practice-item"><span class="practice-star">&#9733;</span><div>Enable automatic Background Security Improvements on every managed Apple device and configure your MDM to enforce this setting. BSI exists specifically for high risk components like WebKit, and having it on automatic keeps the patch window as short as possible without depending on users to act.</div></div>
+          <div class="practice-item"><span class="practice-star">&#9733;</span><div>Give WebKit and Safari updates the same priority as core OS patches. Every browser on iOS and iPadOS depends on WebKit, so a single engine-level flaw has a wider reach than most platform vulnerabilities. Build that reality into your patching SLA.</div></div>
+          <div class="practice-item"><span class="practice-star">&#9733;</span><div>Deploy a Secure Web Gateway or browser isolation solution for staff accessing sensitive internal applications from mobile devices. These controls put the browser engine outside your trust boundary and continue to protect users even when a device patch has not yet landed.</div></div>
+          <div class="practice-item"><span class="practice-star">&#9733;</span><div>Use short lived session tokens and continuous access evaluation on web applications accessed from mobile. A token that expires in minutes is far less valuable to an attacker than one that stays valid for hours. Pair this with risk based step up authentication for high value resources.</div></div>
+          <div class="practice-item"><span class="practice-star">&#9733;</span><div>Subscribe to Apple security update notifications at <a href="https://support.apple.com/en-us/100100" target="_blank" rel="noopener">support.apple.com/en-us/100100</a> and check the Apple Security Releases page regularly. BSI patches do not always surface in MDM update feeds immediately, so direct monitoring is the most reliable way to catch them when they drop.</div></div>
+          <div class="practice-item"><span class="practice-star">&#9733;</span><div>Include browser security in staff awareness training, specifically the risk of following unfamiliar links, scanning QR codes from unknown sources, and ignoring software update prompts. A browser exploit needs nothing more than a page load, so user habits matter in ways that other attack types do not.</div></div>
+          <div class="practice-item"><span class="practice-star">&#9733;</span><div>Apply the same patch currency requirements to BYOD Apple devices that you apply to managed ones. If a personal iPhone or iPad is connecting to corporate resources, it needs to be on a supported and patched OS version. Browser engine vulnerabilities do not distinguish between managed and unmanaged devices.</div></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">11. References</div>
+        <div class="ref-list">
+          <div class="ref-item"><strong>Apple Security Releases (17 March 2026):</strong> <a href="https://support.apple.com/en-us/100100" target="_blank" rel="noopener">support.apple.com/en-us/100100</a></div>
+          <div class="ref-item"><strong>CVE Record CVE-2026-20643:</strong> <a href="https://www.cve.org/CVERecord?id=CVE-2026-20643" target="_blank" rel="noopener">cve.org/CVERecord?id=CVE-2026-20643</a></div>
+          <div class="ref-item"><strong>The Hacker News:</strong> Apple Fixes WebKit Vulnerability Enabling Same-Origin Policy Bypass on iOS and macOS &ndash; <a href="https://thehackernews.com/2026/03/apple-fixes-webkit-vulnerability.html" target="_blank" rel="noopener">thehackernews.com</a></div>
+          <div class="ref-item"><strong>BleepingComputer:</strong> Apple pushes first Background Security Improvements update to fix WebKit flaw &ndash; <a href="https://www.bleepingcomputer.com/news/security/apple-pushes-first-background-security-improvements-update-to-fix-webkit-flaw/" target="_blank" rel="noopener">bleepingcomputer.com</a></div>
+          <div class="ref-item"><strong>MacRumors:</strong> Apple Releases Background Security Improvement Update for macOS Tahoe 26.3.1, iOS 26.3.1, and iPadOS 26.3.1 &ndash; <a href="https://www.macrumors.com/2026/03/17/security-update-ios-26-3-1/" target="_blank" rel="noopener">macrumors.com</a></div>
+          <div class="ref-item"><strong>MITRE ATT&amp;CK T1185:</strong> Browser Session Hijacking &ndash; <a href="https://attack.mitre.org/techniques/T1185/" target="_blank" rel="noopener">attack.mitre.org/techniques/T1185</a></div>
+          <div class="ref-item"><strong>MITRE ATT&amp;CK T1539:</strong> Steal Web Session Cookie &ndash; <a href="https://attack.mitre.org/techniques/T1539/" target="_blank" rel="noopener">attack.mitre.org/techniques/T1539</a></div>
+          <div class="ref-item"><strong>Apple Support:</strong> About Background Security Improvements &ndash; <a href="https://support.apple.com/en-us/111900" target="_blank" rel="noopener">support.apple.com/en-us/111900</a></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <div class="footer-left">
+        <p>Need help? Contact our SOC at <a href="/cdn-cgi/l/email-protection#e881868e87a8868d909e818990c68b8785"><span class="__cf_email__" data-cfemail="83eaede5ecc3ede6fbf5eae2fbade0ecee">[email&#160;protected]</span></a></p>
+        <p class="sub">Nexviax &nbsp;&#183;&nbsp; Confidential &amp; For Authorized Recipients Only</p>
+      </div>
+      <div class="footer-right">Threat Advisory</div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="main-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-12">
+                <div class="footer-links">
+                    <div class="footer-logo">
+                        <img src="../images/logo-dark.svg" alt="" />
+                        <div class="footer-social-links">
+                            <ul>
+                                <li><a href="https://www.linkedin.com/company/nexviax" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                                <li><a href="https://www.x.com/nexviax" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                <li><a href="https://youtube.com/@nexviax" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                                <li><a href="https://medium.com/@nexviax" target="_blank"><i class="fa-brands fa-medium-m"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-5">
+                <div class="footer-links footer-quick-links">
+                    <h3>Quick links</h3>
+                    <ul>
+                        <li><a href="../index.html#index">home</a></li>
+                        <li><a href="../index.html#abouts-us">about us</a></li>
+                        <li><a href="../index.html#our-services">services</a></li>
+                        <li><a href="../index.html#faq">FAQ</a></li>
+                        <li><a href="../index.html#blogs">blogs</a></li>
+                        <li><a href="../privacy.html">Privacy policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-4 col-7">
+                <div class="footer-links">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>
+                            <span class="footer-contact-section">
+                                <img src="../images/icon-phone-accent-white.svg" /><a href="tel:+918807959368">+91 88079 59368</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="footer-contact-section">
+                                <img src="../images/icon-mail-accent-white.svg" /><a href="/cdn-cgi/l/email-protection#96fff8f0f9d6f8f3eee0fff7eeb8f5f9fb" class="footer-email-text"><span class="__cf_email__" data-cfemail="553c3b333a153b302d233c342d7b363a38">[email&#160;protected]</span></a>
+                            </span>
+                        </li>
+                        <li class="footer-email-text">
+                            <span class="footer-contact-location-section">
+                                <img src="../images/icon-location-white.svg" />
+                                <p>3rd Floor, Maestro Building, S.P. Garden, Kappi Kadai, Vilankurichi, Coimbatore 641035, Tamil Nadu, India</p>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer-copyright-text">
+                        <p>Copyright &copy; 2026 All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </di
